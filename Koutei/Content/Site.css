@@ -1,0 +1,107 @@
+﻿/* Move down content because we have a fixed navbar that is 82px tall */
+body {
+    padding-top: 82px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding: 0px;
+    max-width: calc(100vw);
+    min-height: calc(100vh - 82px);
+    background-color: rgb(249, 247, 245);
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 350px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+}
+
+.custom-navbar {
+    margin-top: 43px;
+    height: 39px;
+    background-color: rgba(20,101,165,1);
+}
+
+.custom-navbar-height {
+    padding: 1.4px 0.5em;
+}
+
+.navbar {
+    z-index: 90;
+}
+
+    .navbar + .navbar {
+        z-index: 80;
+        padding: 0 1.5em;
+    }
+
+.navbar-brand-custom {
+    padding: 0;
+    font-size: 13px;
+}
+
+.nav-user-lbl {
+    margin-top: 4px;
+    line-height: 20px;
+}
+
+.nav-item-custom {
+    padding: 0;
+}
+
+    .nav-item-custom a:hover {
+        background-color: rgba(29,32,136,1) !important;
+    }
+
+.nav-home-custom {
+    padding: 0.32em 0.7em !important;
+}
+
+.nav-btn-custom {
+    padding: 0.45em 1.3em !important;
+}
+
+.navbar-brand-custom-text {
+    color: rgb(0,113,188);
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.nav-imgbtn-custom {
+    padding: 0.32em 0.5em;
+}
+
+.dropdown-item-custom {
+    color: rgb(75,75,75) !important;
+    font-size: 13px;
+    padding: 0.25rem 0.5rem;
+    line-height: 20px;
+}
+
+    .dropdown-item-custom:hover {
+        background-color: rgba(235,235,235,0.5);
+    }
+
+.dropdown-menu-custom {
+    padding: 5px;
+    width: 180px;
+    margin-top: 0px;
+    border-radius: 6px;
+    box-shadow: 0px 3px 4px rgb(153,153,153);
+}
+
+.dropdown_separator {
+    border-top: 0.5px solid rgba(0, 0, 0, 0.15);
+    margin: 4px 0px;
+}

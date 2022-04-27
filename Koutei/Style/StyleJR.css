@@ -1,0 +1,2194 @@
+﻿body {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/************************************** S00ErrorC *************************************************/
+#err_content p {
+    font-size: 140%;
+    text-align: center;
+    margin-top: 100px;
+    color: rgb(75,75,75);
+}
+
+.title {
+    width: 100%;
+    text-align: left;
+    background-color: #0071BC;
+    color: white;
+    margin-top: -21px;
+}
+
+.header {
+    margin-left: 10px;
+}
+
+.divTopPage {
+    text-align: center;
+}
+
+.lnkbtnTopPage {
+    font-size: 14px;
+    color: rgba(41, 171, 226, 1);
+}
+
+/***************************J01Login_ログイン画面*************************************/
+
+.J01Error {
+    color: rgb(255,0,0);
+    font-size: 11px;
+}
+
+.J01Image {
+    width: 140px !important;
+    height: 156px !important;
+    margin-bottom: 35px !important;
+    margin-top: 10px !important;
+}
+
+.J01lblDisplayMessage {
+    color: rgba(0,113,188,1);
+    font-size: 16px;
+}
+
+.J01LoginLblTitleName {
+    font-size: 30pt;
+    color: rgba(0,113,188,1);
+}
+
+.J01divLogincolumn {
+    border-radius: 20px;
+    width: 420px !important;
+}
+
+.J01txtRow {
+    margin-bottom: 0px !important;
+}
+
+.J01ErrorRow {
+    height: 20px !important;
+}
+
+.J01TextBox {
+    width: 320px !important;
+    max-width: 320px !important;
+}
+
+.J01BtnLogin {
+    width: 320px !important;
+    max-width: 320px !important;
+    max-height: 40px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    color: rgb(255, 255, 255);
+    background: rgba(41, 171, 226, 1) !important;
+}
+
+.J01LinkButton {
+    font-size: 14px;
+    color: rgba(0,113,188,1) !important;
+    text-decoration: none !important;
+}
+
+.J01PwdResetButton {
+    font-weight: bold;
+}
+
+.J01Body {
+    padding-top: 25px !important;
+    background-color: rgb(249, 247, 245) !important;
+    overflow-x: hidden;
+}
+
+.J01BtnLogin[disabled] {
+    background: rgba(41, 171, 226, 0.69) !important;
+}
+
+.J01BtnCreateAcc {
+    width: 320px !important;
+    max-width: 320px !important;
+    max-height: 40px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    text-align: center;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    background: rgba(228,94,48,1) !important;
+    font-size: 16px !important;
+}
+
+/***************************J02Touroku_登録画面*************************************/
+
+.J02Form {
+    margin-left: -8px;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgb(249, 247, 245);
+    overflow-y: auto;
+}
+
+.J02DivUserTouroku {
+    background-color: #ffffff;
+    border: solid;
+    border-radius: 20px;
+    border-color: #ffffff;
+    margin: 31px 35px 0 35px;
+    width: 800px !important;
+}
+
+.J02NyuryokuLabel {
+    font-size: 13px !important;
+}
+
+.J02LabelColor {
+    color: red;
+}
+
+.J02ErrorLabel {
+    font-size: 11px !important;
+    text-align: left;
+    display: block;
+    color: red;
+    margin-top: 3px;
+}
+
+.J02TourokuButton {
+    line-height: 35px;
+    text-align: center;
+    border: none;
+    font-size: 13px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    background: rgb(91, 155, 213);
+}
+
+    .J02TourokuButton:hover {
+        background: rgba(0,113,188,1);
+    }
+
+.DisableJ02TourokuButton {
+    line-height: 35px;
+    text-align: center;
+    border: none;
+    font-size: 13px;
+    border-radius: 6px;
+    color: rgb(192,192,192);
+    background: rgb(91, 155, 213);
+}
+
+.J02Textbox {
+    width: 420px !important;
+    max-width: 420px !important;
+}
+
+.J02DropDown {
+    height: 28px;
+    width: 320px !important;
+    max-width: 320px !important;
+    font-size: 13px;
+    background-color: rgb(255,255,255);
+    padding-left: 3px;
+    padding-right: 2px;
+    border-radius: 4px !important;
+}
+
+.J02Height {
+    height: 16px;
+}
+
+.J02KakuninLabelHeight {
+    height: 30px;
+}
+
+.J02LabelWidth {
+    width: 170px;
+}
+
+.J02ButtonMargin {
+    padding-left: 142px !important;
+}
+
+.J02ChkLinkButton {
+    font-size: 13px;
+    color: rgb(41, 171, 226) !important;
+    text-decoration: none !important;
+    position: absolute;
+    margin-top: 3px;
+}
+
+    .J02ChkLinkButton:hover {
+        color: rgba(0,113,188,1) !important;
+    }
+
+.J02ChkLabel {
+    font-size: 13px;
+    position: absolute;
+    margin-left: 53px;
+    margin-top: 3px;
+}
+
+.J02ChkBox {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+    .J02ChkBox input {
+        width: 22px;
+        height: 22px;
+        margin: 0px 6px 0px 0px;
+    }
+
+/***************************J03TourokuKakuninMessage*************************************/
+.J03NyuryokuLabel {
+    display: inline-block;
+    line-height: 25px;
+    font-size: 17px !important;
+}
+
+.J03NyuryokuLabel1 {
+    display: inline-block;
+    line-height: 25px;
+    width: 340px;
+    text-align: left;
+}
+
+.J03divContainer {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .J03NyuryokuLabel {
+        width: auto;
+    }
+}
+
+.J03LinkLbl {
+    width: 73% !important;
+}
+
+.J03DivUserTouroku {
+    background-color: #ffffff;
+    height: 91vh !important;
+    border: solid;
+    border-radius: 20px;
+    border-color: #ffffff;
+    margin: 31px 35px 0 35px;
+    padding-top: 48px;
+    width: 800px !important;
+}
+
+.J03imgbtnJobzRacoo {
+    width: 140px;
+    height: 156px !important;
+}
+
+/***************************J04Validate*******************************************/
+.J04Label1 {
+    display: inline-block;
+    line-height: 25px;
+}
+
+.J04Label2 {
+    display: inline-block;
+    line-height: 25px;
+}
+
+.J04Label3 {
+    display: inline-block;
+    line-height: 25px;
+}
+
+.J04DivOKMessage {
+    padding: 0 50px;
+    text-align: center;
+}
+
+.J04LabelFontSize {
+    font-size: 17px !important;
+}
+
+/*J05TourokuKakuninOK*/
+/***************************J06AnkenNyuuryoku*************************************/
+
+.J06Div {
+    height: 675px !important;
+    width: 600px !important;
+    background-color: white;
+}
+
+.J06SentakuUserLabel {
+    width: 176px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
+    margin-top: 2px;
+}
+
+.J06btnTokuisaki {
+    width: 60px;
+    height: 20px;
+    border-radius: 7px !important;
+    border: none;
+    background-color: rgb(195,195,195);
+    color: white;
+    font-size: 13px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .J06btnTokuisaki {
+        width: 50px;
+    }
+}
+
+.J06TextArea {
+    margin-top: 5px;
+    resize: none;
+    word-break: break-all;
+    background-color: white !important;
+    font-size: 13px !important;
+    padding: 3px !important;
+    border: 0.5px solid rgb(155, 155, 155) !important;
+}
+
+.J06TextAreaRow ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: rgb(230, 230, 230);
+}
+
+.J06TextAreaRow ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgb(190,190,190);
+}
+
+.J06TextAreaRow ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 1px;
+    background-color: rgb(241,241,241);
+}
+
+/*J07AnkenProperty*/
+
+.J07AnkenPropertyMainDiv {
+    width: 600px !important;
+    height: 738px;
+    background-color: #FFF;
+}
+
+
+.J07Nouhinsuu {
+    margin-right: 0px !important;
+}
+
+.J07Checkbox {
+    padding-top: 1px;
+    margin-bottom: 0px !important;
+    vertical-align: middle !important;
+}
+
+    .J07Checkbox label {
+        position: relative !important;
+        top: -2px !important;
+    }
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .J07Checkbox label {
+        top: -3px !important;
+    }
+}
+
+.J07FooterLabel {
+    font-size: 10px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 80px !important;
+    text-align: left;
+}
+
+.J07FooterRow {
+    padding-left: 20px !important;
+}
+
+.J07CrossBtn {
+    line-height: 24px !important;
+}
+
+/*J08AnkenSentaku*/
+
+.J08MainDiv {
+    max-width: 1250px !important;
+    width: 1250px !important;
+    height: 637px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    border-radius: 15px;
+}
+
+.J08TitleLabel {
+    margin-top: 12px !important;
+    margin-bottom: 12px !important;
+}
+
+.J08PopupCloseBtn {
+    margin: -49px -4px !important;
+}
+
+.J08GridHeaderStyle {
+    text-align: center !important;
+    background-color: rgba(220,232,244,1);
+    border-right: 1px solid white;
+}
+
+.J08AnkenSentakuDiv {
+    margin-top: 3px;
+    float: left;
+    width: 100%;
+}
+
+.J08AnkenSentakuMargin {
+    margin-top: 5px;
+}
+
+.J08AnkenpaddingLeft {
+    min-height: 26px;
+    padding-left: 5px;
+}
+
+.J08AnkenPagingTable {
+    text-align: right;
+}
+
+.J08Borderline {
+    margin: 0px 0px 2px 0px !important;
+}
+
+.J08CursorPointer {
+    cursor: pointer;
+}
+
+.J08TantoushaImage {
+    margin-top: 6px;
+    height: 15px;
+    max-width: 15px;
+    float: left;
+    cursor: default;
+}
+
+.J08AnkenGridIdCol, .J08AnkenGridIdHeaderCol {
+    width: calc(100vw / 17) !important;
+    min-width: 61px;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J08AnkenGridAnkenIdLbl {
+    min-width: 61px;
+    width: 61px;
+    min-height: 15px;
+    height: 15px;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J08AnkenGridNameCol, .J08AnkenGridNameHeaderCol {
+    width: calc(100vw / 13) !important;
+    min-width: 180px;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J08GridViewNoDataStyle {
+    font-size: 27px;
+    color: rgb(100,100,100);
+    font-weight: bold;
+    padding-left: 20%;
+    padding-top: 10%;
+}
+
+    .J08GridViewNoDataStyle td {
+        padding-left: 20%;
+        padding-top: 10%;
+        height: 447px;
+    }
+
+.J08AnkenGridAnkenNameLbl {
+    min-width: 175px;
+    width: 175px;
+    min-height: 15px;
+    height: 15px;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J08AnkenGridDateCol, .J08AnkenGridDateHeaderCol {
+    width: calc(94vw / 13) !important;
+    min-width: 95px;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J08AnkenGridAnkenDateLbl {
+    min-width: 90px;
+    width: 90px;
+    min-height: 15px;
+    height: 15px;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J08AnkenGridCountCol, .J08AnkenGridCountHeaderCol {
+    width: calc(67vw / 12) !important;
+    min-width: 87px;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J08AnkenGridAnkenCountLbl {
+    min-height: 15px;
+    height: 15px;
+    min-width: 86px;
+    width: 86px;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J08AnkenGridMeiCol, .J08AnkenGridMeiHeaderCol {
+    width: calc(100vw / 13) !important;
+    min-width: 100px;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J08AnkenGridMeiLbl {
+    min-width: 95px;
+    width: 95px;
+    min-height: 15px;
+    height: 15px;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J08MemoDataCol, .J08MemoHeaderCol {
+    width: calc(100vw / 13) !important;
+    min-width: 299px;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J08AnkenGridMemoLbl {
+    min-width: 299px;
+    width: 299px;
+    min-height: 15px;
+    height: 15px;
+    padding: 0px 2.5px 0px 0px;
+}
+
+.J08AlignCenter {
+    text-align: center;
+}
+
+.J08AlignRight {
+    text-align: right;
+}
+
+.J08AlignLeft {
+    text-align: left;
+}
+
+.J08BottomDiv {
+    margin-top: 10px;
+}
+
+.J08BtnSentaku {
+    line-height: 24px !important;
+}
+
+.J08lblTantousha {
+    line-height: 30px !important;
+    float: left;
+}
+
+.J08btnSearch {
+    text-align: left;
+}
+
+.J08AnkenSearchTblDiv {
+    width: 170px;
+    margin-left: 5px;
+    height: 24px;
+}
+
+.J08AnkenShiteiNashiLbl {
+    line-height: 18px;
+    min-width: 100px;
+    text-align: left;
+    border: none;
+    font-size: 11px;
+    border-radius: 6px;
+    color: rgb(155, 155, 155);
+    background: white;
+}
+
+.J08AnkenCrossBtnGray {
+    color: rgb(100, 100, 100) !important;
+}
+
+.J08AnkenSeachLbl {
+    margin-top: 2px;
+    line-height: 25px !important;
+    float: left;
+    color: rgb(155, 155, 155);
+}
+
+.J08GirdViewStyle {
+    width: calc(100vw / 13) !important;
+    height: 440px;
+    min-height: 440px;
+    max-height: 440px;
+    width: 1230px;
+    min-width: 1230px;
+    display: inline-block;
+}
+
+    .J08GirdViewStyle tr {
+        height: 21px;
+    }
+
+.J08ShiteiNashiLbl {
+    line-height: 23px;
+    width: 23px;
+    text-align: left;
+    padding-left: 5px;
+    border: none;
+    font-size: 11px !important;
+    border-radius: 6px;
+    color: rgb(155,155,155);
+    background: transparent;
+}
+
+.J08lblUpdateStyle {
+    margin-top: 5px;
+}
+
+.J08BtnBackground {
+    border: none;
+    background-color: transparent;
+    height: 19px;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(75, 75, 75);
+}
+
+.J08AnkenSentakuBtnFirst {
+    max-width: 22%;
+    padding-left: 11px;
+}
+
+.J08AnkenSentakuBtnSecond {
+    max-width: 47%;
+    padding-left: 60px;
+}
+
+.J08AnkenSentakuBtnThird {
+    max-width: 31%;
+    padding-left: 90px;
+}
+
+/****************J09SeisanSuuTouroku****************/
+.J09Div {
+    height: 450px;
+    width: 620px;
+    background-color: white;
+}
+
+.J09GridviewDiv {
+    max-height: 187px;
+    overflow: auto;
+}
+
+.J09GridViewRow {
+    line-height: 10px;
+    height: 37px;
+    border-bottom: 0.5px solid rgb(230, 230, 230);
+    border-top: 1px transparent;
+}
+
+.J09PlusBtnNew {
+    height: 35px;
+    border: none;
+    line-height: 20px;
+    background-color: transparent;
+    color: rgb(75, 75, 75);
+    font-size: 13px;
+    vertical-align: top;
+}
+
+.J09AlignDiv {
+    height: 300px;
+}
+
+.J09SubMenuDiv {
+    transform: translate3d(-80px, -7px, 0px) !important;
+    z-index: 70 !important;
+    height: 30px;
+    padding: 1px 0 !important;
+    min-width: 100px !important;
+    margin-top: 2px !important;
+}
+
+J09LbllineHeight {
+    line-height: 15px;
+    height: 11px;
+}
+
+.J09TooltipLabel {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    line-height: 15px;
+    height: 11px;
+    text-align: right;
+}
+
+.J09MenuBtn {
+    border: none;
+    width: 21px;
+    float: right;
+}
+
+.J09SubMenuBtn {
+    height: 26px;
+    font-size: 13px;
+    color: rgb(75,75,75) !important;
+}
+
+    .J09SubMenuBtn:hover {
+        background-color: rgba(235,235,235,0.5);
+    }
+
+.J09lblHenKousha {
+    line-height: 14px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .J09lblHenKousha {
+        line-height: 14px;
+    }
+}
+/****************J12PasswordShuusei****************/
+.J12UserPasswordChangeDiv {
+    width: 405px !important;
+    height: 255px !important;
+}
+
+.J12PropertyTextbox {
+    height: 23px !important;
+    margin-left: 52px;
+}
+
+.J12PropertyLabel {
+    margin-left: 91px;
+}
+
+.J12ErrorMessage {
+    margin-left: 157px;
+}
+
+.J12RowHeight {
+    height: 25px;
+}
+
+/************************ J13TokuisakiSub *****************************/
+
+.J13TokuisakiMainDiv {
+    max-width: 350px !important;
+    width: 400px !important;
+    max-height: 370px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    border-radius: 20px !important;
+}
+
+/***************************J14TorihikisakiTouroku_取引先登録画面*************************************/
+.J14TorihikisakiDiv {
+    width: 522px !important;
+    height: 400px !important;
+}
+
+.J14FirstColWidth {
+    width: 105px !important;
+    font-size: 13px;
+}
+
+.J14Table {
+    width: 490px;
+}
+
+.J14PostCodeDiv {
+    display: -webkit-box;
+}
+
+.J14NyuryokuLabel {
+    font-size: 13px;
+    padding-left: 15px !important;
+}
+
+.J14Table tr {
+    height: 40px;
+}
+
+.J14Label {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.J14ButtonDiv {
+    text-align: center;
+    margin-top: 5px !important;
+}
+
+.J14TextBox {
+    display: inline-block !important;
+}
+
+.J14Button {
+    color: rgb(255, 255, 255) !important;
+    background: rgba(41, 171, 226, 1) !important;
+    border-radius: 6px !important;
+}
+
+.J14CancelButton {
+    color: rgb(41, 171, 226) !important;
+}
+
+.J14Checkbox {
+    margin-bottom: 0px !important;
+    vertical-align: middle !important;
+}
+
+    .J14Checkbox label {
+        position: relative !important;
+        top: -2px !important;
+    }
+
+.J14CheckboxErrorDiv {
+    width: 160px;
+    border: none;
+    padding-top: 5px;
+    padding-left: 2px;
+    height: 32px;
+}
+
+/*************** J15LineTouroku ***************/
+.J15OuterDiv {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+}
+
+.J15CloseBtnDiv {
+    display: inline-block;
+    width: 100%;
+}
+
+.J15CloseBtn {
+    margin-top: 6px;
+}
+
+.J15CrossBtn {
+    background-color: white;
+    padding: 0px;
+    border: none;
+    float: right;
+    width: 33px;
+    font-size: 21px;
+    height: 30px;
+    line-height: 29px;
+    color: rgb(75,75,75) !important;
+    margin-right: 10px;
+}
+
+    .J15CrossBtn:hover {
+        background: rgb(230, 230, 230);
+        color: rgb(255, 255, 255) !important;
+    }
+
+.J15Link {
+    display: contents;
+}
+
+.J15LineBtn {
+    margin-top: 17px;
+}
+
+/***************************J16HidukeSu_日付サブ画面*************************************/
+.J16Div {
+    height: 365px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    border-radius: 20px;
+}
+
+TABLE A {
+    text-decoration: none;
+}
+
+.J16Button {
+    color: rgb(100,100,100);
+    background-color: rgb(230, 230, 230);
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    padding-top: 3px;
+    border: 5px solid white;
+    background-clip: padding-box;
+}
+
+/* for safari 5.1.7 hack */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    ::outside chrome, .S20Button {
+        border-radius: 18px;
+        border: 6px solid white;
+        padding-top: 4px;
+    }
+}
+
+.J16DayStyle {
+    color: rgb(100,100,100);
+}
+
+.J16OtherMonthDayStyle {
+    font-weight: 600;
+}
+
+.J16SelectedDayStyle {
+    color: white;
+    width: 50px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.J16SelectorStyle {
+    background-color: #FFCC66;
+}
+
+/* for safari 5.1.7 hack */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    ::outside chrome, .S20SelectedDayStyle {
+        height: 28px;
+        -webkit-border-radius: 50%;
+    }
+}
+
+.J16TitleStyle {
+    background-color: white;
+    font-weight: bolder;
+    text-shadow: inherit;
+    font-size: 10pt;
+    color: rgb(41, 171, 226);
+}
+
+/* for safari 5.1.7 hack */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    ::outside chrome, .S20TitleStyle {
+        font-size: 11pt;
+    }
+}
+
+.J16Calendar {
+    Font-Size: 10pt;
+    color: black;
+    background-color: white;
+    border: none;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-align: center;
+    height: 260px;
+    width: 240px;
+}
+
+.J16KadouJikanSetteiBtn {
+    width: 80px;
+    margin-left: 33px;
+}
+
+.J16DivJikan {
+    margin-left: 55px;
+    margin-top: 5px;
+}
+
+.J16TdButtonHeight {
+    height: 40px;
+}
+
+/* for safari 5.1.7 hack */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    ::outside chrome, .S20TdButtonHeight {
+        height: 45px;
+    }
+}
+
+.J16BorderLine {
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+/****************** J17TantoushaSub **********************/
+
+.J17TantoushaMainDiv {
+    max-width: 350px !important;
+    width: 400px !important;
+    max-height: 370px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    border-radius: 20px !important;
+}
+
+.J17CheckboxName {
+    border: none;
+    line-height: 20px;
+    background-color: transparent;
+    color: rgb(155, 155, 155);
+    font-size: 13px;
+    padding-left: 22px;
+    margin-left: 105px;
+}
+
+@media (max-width: 480px) {
+    .J17CheckboxName {
+        margin-left: auto;
+    }
+}
+
+.J17CheckboxTantouName {
+    border: none;
+    line-height: 20px;
+    background-color: transparent;
+    color: rgb(155, 155, 155);
+    font-size: 13px;
+    padding-left: 10px;
+    margin-left: 105px;
+}
+
+@media (max-width: 480px) {
+    .J17CheckboxTantouName {
+        margin-left: 0px;
+    }
+}
+
+.J17Checkbox {
+    font-size: 10pt;
+}
+
+    .J17Checkbox input[type='checkbox'] {
+        width: 20px;
+        height: 20px;
+        background: white;
+        margin-left: 0px;
+        line-height: 19px;
+        padding-left: 2px;
+        margin-top: 5px !important;
+        margin-left: 5px !important;
+    }
+
+@media (max-width: 480px) {
+    .J17TantoushaDiv {
+        min-width: 100vw !important;
+        height: 100vh !important;
+        border-radius: 0px !important;
+        border-width: 0px !important;
+    }
+}
+
+.J17TantoushaDiv {
+    min-width: 608px;
+    height: 470px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,0,0,.2);
+    background-color: #fff;
+    display: inline-block;
+}
+
+@media (max-width: 480px) {
+    .J17TantoushaName {
+        max-width: calc(100vw - 130px) !important;
+        width: calc(100vw - 130px) !important;
+    }
+}
+
+.J17TantoushaName {
+    max-width: 125px;
+    width: 125px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    padding: 0;
+    text-align: left;
+    background-color: transparent;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 4px 5px;
+}
+
+@media (max-width: 480px) {
+    .J17NameDiv {
+        display: inline-block;
+        min-width: calc(100vw - 75px) !important;
+    }
+}
+
+.J17NameDiv {
+    display: inline-block;
+    min-width: 160px;
+    height: 25px;
+    line-height: 20px;
+    padding-left: 5px;
+}
+
+@media (max-width: 480px) {
+    .J17SecondDataListDiv {
+        width: calc(100vw - 50px) !important;
+    }
+}
+
+.J17SecondDataListDiv {
+    width: 192px;
+}
+
+.J17SecondDataListDivItem {
+    height: 29px;
+    vertical-align: middle;
+}
+
+@media (max-width: 480px) {
+    .J17SPDataListDiv {
+        width: calc(100vw - 30px) !important;
+        height: calc(100vh - 180px) !important;
+        display: inline-block;
+        border: none;
+        overflow-y: auto;
+        margin-top: 15px;
+    }
+}
+
+.J17DataListDiv {
+    min-width: 576px;
+    max-width: 960px !important;
+    display: inline-block;
+    border: none;
+    overflow-y: auto;
+    height: 295px;
+    margin-top: 15px;
+}
+
+    .J17DataListDiv ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: rgb(230, 230, 230);
+    }
+
+    .J17DataListDiv ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: rgb(190,190,190);
+    }
+
+    .J17DataListDiv ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 1px;
+        background-color: rgb(241,241,241);
+    }
+
+.J17Borderline {
+    border-bottom: 0.5px solid rgb(230, 230, 230);
+    margin: 0px 0px 10px 0px;
+}
+
+.J17HeaderDiv {
+    height: 50px;
+    width: 98% !important;
+}
+
+.J17ImgKensaku {
+    height: 22px;
+    width: 4%;
+    margin-left: 2%;
+    display: inline-block;
+    float: left;
+}
+
+.J17TxtKensaku {
+    margin-top: -21px !important;
+    margin-left: 7% !important;
+}
+
+@media (max-width: 480px) {
+    .J17TxtKensakuDiv {
+        width: calc(100vw - 30px) !important;
+    }
+}
+
+.J17TxtKensakuDiv {
+    height: 30px;
+    border: 0.5px solid rgb(155,155,155);
+    padding-top: 5px;
+    box-sizing: content-box;
+    border-radius: 7px;
+    width: 564px;
+    margin: auto;
+}
+
+.J17SentakuFooter {
+    margin-top: 10px;
+    margin-bottom: 12px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*J18UserTouroku*/
+
+.J18Div {
+    width: 530px;
+    height: 650px;
+    border-radius: 17px;
+    display: inline-block;
+}
+
+.J18TitleLbl {
+    font-size: 20px;
+    color: rgb(75,75,75);
+    width: 100%;
+}
+
+.J18DivUserTouroku {
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.J18Frame {
+    width: 700px;
+}
+
+.J18Form {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+}
+
+.J18btnCancel {
+    border: none;
+    height: 30px;
+}
+
+.J18BtnHeight {
+    height: 30px;
+}
+
+.J18ImgBtnHatenaStyle {
+    vertical-align: middle;
+    height: 14px;
+    width: 14px;
+    margin-right: 8px;
+}
+
+.J18LblKengen {
+    margin-top: 5px;
+}
+
+.J18DivMukou {
+    margin-top: 3px;
+}
+
+.J18FileInput {
+    margin: -132px 0 0 -62px;
+}
+
+.J18ImageErrorDiv {
+    line-height: 8px;
+    height: 14px;
+}
+
+/***************************J19PwdResetMailMessage**************************/
+.J19InfoStyle {
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    width: 420px;
+}
+
+/***************************J20FusenTouroku**************************/
+
+.J20FusenTourokuDiv {
+    max-width: 1050px !important;
+    width: 1050px !important;
+    height: 500px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+}
+
+.J20FusenTourokuDiv1 {
+    max-width: 780px !important;
+    width: 780px !important;
+    height: 500px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+}
+
+.J20FusenTourokuTbl {
+    margin-left: 28px;
+}
+
+.J20FusenTourokuAnkenWidth {
+    max-width: 725px !important;
+    width: 725px;
+}
+
+.J20FusenTourokuAnkenTextBox {
+    width: 720px !important;
+    max-width: 720px;
+}
+
+.J20FusenTourokuTextArea {
+    padding: 3px !important;
+    width: 720px !important;
+    max-width: 720px;
+    line-height: 13px;
+    font-size: 13px !important;
+    resize: none;
+    word-break: break-all;
+    border: 0.5px solid rgb(155, 155, 155) !important;
+}
+
+.J20BottomDiv {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.J20FusenTourokuChkQuickSearch {
+    padding-left: 0px !important;
+}
+
+    .J20FusenTourokuChkQuickSearch input {
+        width: 17px;
+        height: 17px;
+    }
+
+        .J20FusenTourokuChkQuickSearch input[type='checkbox']:checked:after {
+            padding-left: 2px !important;
+        }
+
+.J20FusenTourokuFirstTd {
+    width: 90px;
+}
+
+.J20FusenTourokuSecondTd {
+    width: 120px;
+}
+
+.J20FusenTourokuGrayCrossBtn {
+    line-height: 24px;
+}
+
+.J20FusenTourokuAnkenLbl {
+    text-align: left;
+}
+
+.J20FusenTourokuAnkenID {
+    height: 20px;
+    line-height: 18px;
+}
+
+.J20FusenTourokucheck {
+    height: 35px;
+    padding-top: 8px;
+}
+
+.J20DeleteBtn {
+    margin-right: 5px;
+}
+
+.J20TextAreaScroll ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: rgb(230, 230, 230);
+}
+
+.J20TextAreaScroll ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: rgb(190,190,190);
+}
+
+.J20TextAreaScroll ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 1px;
+    background-color: rgb(241,241,241);
+}
+
+.J20ColorDiv {
+    min-width: 45px;
+    width: 45px;
+    height: 26px;
+    border: 0.5px solid rgb(155, 155, 155);
+    background-color: white;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.J20ColorCheck {
+    font-size: 18px;
+    color: black;
+}
+
+.J20DropDown {
+    width: 60px !important;
+    max-width: 60px !important;
+    font-size: 13px;
+    background-color: rgb(255,255,255);
+    padding: 3px;
+    border-radius: 4px !important;
+}
+
+.J20DivAnkenJouhou {
+    float: left;
+    height: 100px;
+    width: 200px;
+    margin-top: 71px;
+    margin-left: 130px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .J20DivAnkenJouhou {
+        margin-top: 68px;
+    }
+}
+
+.J20DivFusenJouhou {
+    background-color: white;
+    float: left;
+    width: 400px;
+}
+
+.J20GrayLabel {
+    max-width: 350px;
+}
+
+.J20Crossbtn {
+    margin-left: -4px !important;
+}
+
+.J20DivFusenMain {
+    background-color: white;
+    float: right;
+    width: 282px;
+    min-width: 282px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.J20FusenStyle {
+    min-height: 415px;
+}
+
+.J20FusenTopDiv {
+    margin: 13px 10px 5px 10px;
+}
+
+.J20DivFinishedAll {
+    margin-top: -10px;
+    float: right;
+    width: 250px;
+    height: 25px;
+}
+
+.J20FusenAllFinishBtn {
+    padding: 0px 5px;
+    font-size: 13px;
+    float: right;
+    border-radius: 4px;
+    text-decoration: none !important;
+}
+
+.J20FusenInfoDiv {
+    height: 340px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.TantouBoardDiv {
+    z-index: 12;
+}
+
+.J20ImgBtnHatenaStyle {
+    vertical-align: middle;
+    height: 18px;
+    width: 18px;
+}
+
+.J20DetailBtn {
+    float: left;
+    padding-top: 74px;
+}
+
+/***************************J21FusenColorSetting**************************/
+.J21FusenColorSettingMainDiv {
+    max-width: 520px !important;
+    width: 520px !important;
+    height: 200px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+}
+
+.J21FusenColorSettingDiv {
+    height: 100px;
+    text-align: center;
+    margin: 0px 30px 10px 30px;
+}
+
+.J21FusenColorSettingInnerDiv {
+    border-radius: 6px;
+    width: 220px;
+    max-width: 200px;
+    height: 100px;
+}
+
+.J21divFusenTagList {
+    vertical-align: top;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    display: inline-block;
+    background-color: transparent;
+    height: 26px;
+    width: 45px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    line-height: 15px;
+}
+
+.J21ViewDiv {
+    margin-top: 10px;
+    background-color: rgb(155,155,155);
+    height: 20px;
+    border-radius: 2px;
+}
+
+.J21Viewdiv1 {
+    width: 60px;
+}
+
+.J21Viewdiv2 {
+    width: 120px;
+}
+
+.J21EditDiv {
+    height: 28px;
+    margin: 15px 30px 0px 30px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .J21EditDiv {
+        height: 26px;
+    }
+}
+
+.J21ColorName {
+    border-color: white !important;
+    line-height: 16px;
+    background-color: rgb(255,255,255);
+    width: 180px;
+    padding-top: 5px;
+    font-size: 13px !important;
+}
+
+.J21ColorNameTxt {
+    height: 20px;
+    font-size: 13px;
+    background-color: rgb(255,255,255);
+    padding-left: 3px;
+    width: 193px;
+    box-sizing: content-box;
+    border-radius: 3px;
+    margin-right: -5px;
+    display: none;
+}
+
+.J21ColorEditCol {
+    padding-left: 5px;
+    height: 22px;
+}
+
+
+/***************************J22PwdResetMail**************************/
+
+.J22divLogincolumn {
+    padding-top: 24px !important;
+    border-radius: 20px;
+    width: 800px !important;
+    height: 450px !important;
+}
+
+.J22BtnSoushin {
+    width: 190px !important;
+    max-width: 190px !important;
+    max-height: 40px !important;
+    line-height: 30px !important;
+    font-size: 13px !important;
+    border-radius: 6px !important;
+    margin-left: 25px !important;
+}
+
+
+.J22Body {
+    background-color: rgb(249, 247, 245) !important;
+    overflow-x: hidden;
+    padding-top: 70px !important;
+}
+
+.J22LabelRow {
+    width: 637px !important;
+    margin-top: 5px !important;
+}
+
+.J22Textbox {
+    width: 420px !important;
+    max-width: 420px !important;
+}
+
+.J22RowHeight {
+    height: 25px;
+}
+/***************************J23PwdReset_パスワード再設定画面*************************************/
+.J23Form {
+    margin-left: -8px;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: rgb(249, 247, 245);
+    overflow-y: auto;
+}
+
+.J23divContainer {
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 1px;
+}
+
+.J23DivPwdReset {
+    background-color: #ffffff;
+    border: solid;
+    border-radius: 20px;
+    border-color: #ffffff;
+    margin-top: 69px;
+    padding-top: 31px !important;
+    width: 800px !important;
+}
+
+.J23Textbox {
+    width: 300px !important;
+    max-width: 420px !important;
+}
+
+.J23LabelWidth {
+    width: 170px;
+}
+
+.J23Height {
+    height: 25px;
+}
+
+.J23ErrorLabel {
+    font-size: 11px !important;
+    text-align: left;
+    display: block;
+    color: red;
+    margin-top: 3px;
+}
+
+.J23TourokuButton {
+    line-height: 35px;
+    width: 120px;
+}
+
+    .J23TourokuButton:hover {
+        background: rgba(0,113,188,1);
+    }
+
+.J23MailButtonStyle {
+    background-color: rgba(41,171,226,1);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bold
+}
+
+.J23TblStyle {
+    margin: auto;
+}
+
+.J23PwdResetPadding {
+    padding: 35px;
+}
+/***************************J24PwdResetKanryou**************************/
+.J24Body {
+    background-color: rgb(249, 247, 245) !important;
+    overflow-x: hidden;
+    padding-top: 70px !important;
+}
+
+.J24LinkButton {
+    font-size: 13px;
+    color: rgba(0,113,188,1) !important;
+}
+
+.J24MarginBottom {
+    margin-bottom: 31px;
+}
+/***************************J25ValidateMail**************************/
+.J25Form {
+    background-color: rgb(249, 247, 245) !important;
+    overflow-x: hidden;
+    padding-top: 70px !important;
+}
+
+.J25NyuryokuLabel {
+    display: inline-block;
+    line-height: 25px;
+    font-size: 17px !important;
+    width: 443px !important;
+    margin-left: 20px;
+}
+
+.J25NyuryokuLabel1 {
+    display: inline-block;
+    line-height: 25px;
+    width: 155px;
+}
+
+.J25NyuryokuLabel2 {
+    display: inline-block;
+    line-height: 25px;
+    text-align: left;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .J25NyuryokuLabel {
+        width: auto;
+    }
+}
+
+.J25DivMessage {
+    padding: 0 50px;
+    text-align: center;
+}
+
+/***************************J27DateRageSetting**************************/
+
+.J27DateRageSettingDiv {
+    height: 330px;
+}
+
+.J27DateRageSettingButtonDiv {
+    margin-top: 13px;
+    text-align: center;
+}
+
+.S27SentakuHeaderLbl {
+    width: 300px;
+    text-align: right;
+    line-height: 23px;
+    height: 20px;
+    margin: 15px 0px 15px 0px;
+    float: left;
+}
+
+/***************************J28CancelProcessing**************************/
+.J28CancelProcessingDiv {
+    max-width: 600px !important;
+    width: 600px !important;
+    height: 400px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+}
+
+.J28CancelProcessingDiv1 {
+    max-width: 600px !important;
+    width: 600px !important;
+    min-height: 590px;
+    display: inline-block;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+}
+
+.J28BtnTopPage {
+    font-size: 14px;
+    color: rgba(0,113,188,1);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.J28KanryouLabel {
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.J28Image {
+    width: 140px !important;
+    height: 156px !important;
+}
+
+.J28CloseBtn {
+    position: absolute;
+    right: 8px;
+    top: 0;
+}
+
+.J28GreyBtn {
+    line-height: 30px;
+    text-align: center;
+    border: none;
+    font-size: 13px;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    background: rgba(220,220,220, 1);
+}
+
+.J28TourokuTextArea {
+    padding: 3px !important;
+    width: 500px !important;
+    max-width: 500px;
+    line-height: 13px;
+    font-size: 13px !important;
+    resize: none;
+    word-break: break-all;
+    border: 0.5px solid rgb(155, 155, 155) !important;
+}
+
+.J28ChkList {
+    min-height: 100px;
+    display: inline-block;
+    width: 500px;
+}
+
+.J28Content {
+    vertical-align: middle !important;
+}
+
+    .J28Content input {
+        width: 16px;
+        height: 16px;
+    }
+
+    .J28Content label {
+        position: absolute;
+        width: 480px;
+        word-break: break-all;
+        padding-left: 13px;
+        padding-top: 2px;
+    }
+
+/***************************J05TantoushaBoardSentaku**************************/
+
+.J05TantoushaDiv {
+    min-width: 530px !important;
+    height: 453px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #FFF;
+    display: inline-block;
+}
+
+.J05HeaderDiv {
+    height: 50px;
+    width: 97% !important;
+}
+
+.J05DataListDiv {
+    min-width: 500px !important;
+    max-width: 840px !important;
+    display: inline-block;
+    border: none;
+    overflow-y: auto;
+    height: 294px;
+}
+
+.J05ColumnStyle {
+    padding: 0;
+    vertical-align: super;
+}
+
+.J05ContainerHeight {
+    height: 339px !important;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+    .J05ContainerHeight ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: rgb(230, 230, 230);
+    }
+
+    .J05ContainerHeight ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: rgb(190,190,190);
+    }
+
+    .J05ContainerHeight ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 1px;
+        background-color: rgb(241,241,241);
+    }
+
+
+.J05TantoushaName {
+    max-width: 110px !important;
+    width: 110px !important;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 0 0 5px;
+    text-align: left;
+    background-color: transparent;
+}
+
+.J05NameDiv {
+    display: inline-block;
+    min-width: 138px;
+    height: 24px;
+    line-height: 20px;
+    margin-right: 30px;
+    padding-top: 3px;
+    padding-left: 5px;
+    text-decoration: none !important;
+}
+
+.J05NameDiv1 {
+    border-radius: 5px;
+    background: rgba(41, 171, 226, 1);
+}
+
+.J05ShiteiNashiWidth {
+    width: 163px;
+}
+
+.J05ImageButton {
+    vertical-align: middle;
+}
+
+.J05ButtonDiv {
+    margin-top: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.J05BtnImgStyle {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin: 0;
+    vertical-align: middle;
+}
+
+/***************************J29KanriLogin**************************/
+.J29LblKanri {
+    font-size: 20px;
+}
+
+.J29Body {
+    padding-top: 60px !important;
+    background-color: rgb(249, 247, 245) !important;
+    overflow-x: hidden;
+}
+
+.J29Image {
+    width: 140px !important;
+    height: 156px !important;
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+
+/***************************J30AdminKanri**************************/
+
+.J30Body {
+    padding-top: 25px !important;
+    margin-left: 5px !important;
+}
+
+.J30Checkbox {
+    margin-right: 8px;
+}
+
+    .J30Checkbox input {
+        width: 16px;
+        height: 16px;
+        margin: 0 6px 0 0;
+        padding-top: 5px;
+    }
+
+        .J30Checkbox input[type="checkbox"] + label {
+            cursor: pointer;
+            vertical-align: middle;
+            margin-bottom: 5px !important;
+        }
+
+.J30GirdViewHeaderTbl {
+    margin-left: 5px;
+    text-align: center;
+    line-height: 22px;
+}
+
+.J30MarginLeftLbl {
+    margin-left: 10px;
+}
+
+.J30ChkLabel {
+    line-height: 25px;
+    float: left;
+}
+
+.J30MarginBottomLbl {
+    margin-bottom: 15px;
+}
+
+.J30CheckboxTd {
+    min-width: 495px;
+    width: 495px;
+}
+
+.J30GridView {
+    line-height: 20px;
+    border-color: white;
+}
+
+    .J30GridView th {
+        text-align: center !important;
+        background-color: rgba(220,232,244,1);
+        border-right: 1px solid white;
+    }
+
+.J30GridViewContainer {
+    width: 100%;
+    margin: 20px 0px 0px;
+}
+
+.J30GridClientNameCol {
+    min-width: 100px;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J30GridClientNameLbl {
+    min-width: 100px;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J30ClientIdCol {
+    min-width: 188px;
+    width: calc(100vw / 6.8) !important;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J30ClientIdLbl {
+    min-width: 188px;
+    width: calc(100vw / 6.8) !important;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+@media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    .J30ClientIdCol {
+        min-width: 177px;
+        width: calc(100vw / 7.7) !important;
+    }
+
+    .J30ClientIdLbl {
+        min-width: 177px;
+        width: calc(100vw / 7.7) !important;
+    }
+}
+
+.J30ClientStatusCol {
+    min-width: 97px;
+    width: calc(100vw / 14) !important;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J30ClientStatusLbl {
+    min-width: 97px;
+    width: calc(100vw / 14) !important;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J30GridUserNameCol {
+    min-width: 110px;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J30GridUserNameLbl {
+    min-width: 110px;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J30DateCol {
+    min-width: 131px;
+    width: calc(100vw / 9.9) !important;
+    padding: 0px !important;
+    font-size: 13px;
+}
+
+.J30DateLbl {
+    min-width: 131px;
+    width: calc(100vw / 9.9) !important;
+    padding: 0px 2.5px 0px 2.5px;
+}
+
+.J30TextArea {
+    margin-top: 20px;
+    resize: none;
+    width: 380px;
+    max-width: 380px !important;
+    height: 170px;
+    border-radius: 5px;
+    resize: none;
+    word-break: break-all;
+    background-color: white !important;
+    font-size: 13px !important;
+    padding: 3px !important;
+    border: 0.5px solid rgb(155, 155, 155) !important;
+}
+
+.J30SqlUpdateDiv {
+    width: 440px;
+    height: 255px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+}
