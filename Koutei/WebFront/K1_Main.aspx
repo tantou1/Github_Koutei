@@ -18,8 +18,8 @@
 
             </Scripts>
         </asp:ScriptManager>
-        <div class="">
-             <asp:Button ID="btnFusenTsuika" runat="server" Text="＋タスクを追加" CssClass="UC02FusentSuikaBtn UC02MobileFusentSuikaBtn" role="button"
+        <div style="margin-left:4px;">
+             <asp:Button ID="btnFusenTsuika" runat="server" Text="＋タスクを追加" CssClass="UC02FusentSuikaBtn UC02MobileFusentSuikaBtn ml-3" role="button"
             onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');" OnClick="btnFusenTsuika_Click" /> <br />
         </div>
         <div class="row mx-0 ">
