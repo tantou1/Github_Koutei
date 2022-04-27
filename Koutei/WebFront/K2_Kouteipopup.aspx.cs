@@ -23,7 +23,7 @@ namespace Koutei.WebFront
                     hdnHome.Value = SessionUtility.GetSession("HOME").ToString();
                     SessionUtility.SetSession("HOME", null);
                 }
-               
+                TB_taskname.Focus();
                 K_ClientConnection_Class test = new K_ClientConnection_Class();
                 DataTable dt = test.GetKoutei();
                 //ポップアップにチェックボックスを作成のため
