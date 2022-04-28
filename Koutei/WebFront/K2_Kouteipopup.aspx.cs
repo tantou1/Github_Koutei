@@ -64,13 +64,13 @@ namespace Koutei.WebFront
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("ckoutei");
-                foreach (ListItem item in CheckBoxList.Items)
+            foreach (ListItem item in CheckBoxList.Items)
+            {
+                if (item.Selected)
                 {
-                    if (item.Selected)
-                    {
-                        dt.Rows.Add(item.Value);
-                    }
+                    dt.Rows.Add(item.Value);
                 }
+            }
 
             K2_Save_Class data_save = new K2_Save_Class();            if (!data_save.DataSave(dt, TB_taskname.Text))            {                return false;            }
             return true;
