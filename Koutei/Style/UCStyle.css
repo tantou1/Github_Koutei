@@ -371,12 +371,24 @@
 
 /******** UC02FusenBoard y*******/
 .UC02BoardDiv {
-    height: 87vh;
+    height: 89vh;
     overflow-y: hidden;
     background-color: rgb(249, 247, 245);
     border-radius: 15px;
     vertical-align: middle;
     display: inline-block;
+}
+
+@media (max-width: 480px) {
+    .UC02BoardDiv {
+        width: calc(100vw - 102px) !important;
+    }
+}
+
+@media (min-width: 481px) {
+    .UC02BoardDiv {
+        width: 272px;
+    }
 }
 
 .UC02FusentSuikaBtn {
