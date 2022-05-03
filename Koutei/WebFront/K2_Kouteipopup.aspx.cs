@@ -76,6 +76,5 @@ namespace Koutei.WebFront
             return true;
 
         }
-        
     }
 }
