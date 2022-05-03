@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="K2_Kouteipopup.aspx.cs" Inherits="Koutei.WebFront.K2_Kouteipopup" %>
+﻿<%@ Page Async="true"  Language="C#" AutoEventWireup="true" CodeBehind="K2_Kouteipopup.aspx.cs" Inherits="Koutei.WebFront.K2_Kouteipopup" %>
 
 <!DOCTYPE html>
 
@@ -27,7 +27,7 @@
 
             </Scripts>
         </asp:ScriptManager>
-
+            
         <asp:UpdatePanel ID="updBody" runat="server" UpdateMode="Conditional">
             <ContentTemplate>
                 <div id="Div_Body" runat="server" style="background-color: transparent; padding-top: 100px; min-height: 100%;">
