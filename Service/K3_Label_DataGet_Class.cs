@@ -11,6 +11,8 @@ namespace Service
 {
     public class K3_Label_DataGet_Class
     {
+        public DateTime dHENKOU { get; set; }
+
         public DataTable Get_Label()
         {
             MySqlConnection con = new MySqlConnection("Server=" + DBUtilitycs.Server + "; Database=" + DBUtilitycs.Database + "; User Id=" + DBUtilitycs.user + "; password=" + DBUtilitycs.pass);
@@ -37,6 +39,42 @@ namespace Service
             }
             con.Close();
             return dt;
+        }
+        public bool EndLable(string labelid)
+        {
+            MySqlConnection con = new MySqlConnection("Server=" + DBUtilitycs.Server + "; Database=" + DBUtilitycs.Database + "; User Id=" + DBUtilitycs.user + "; password=" + DBUtilitycs.pass);
+
+            dHENKOU = ConstantVal.Fu_GetDateTime(con);
+
+            String qr_update = "Update ";
+            qr_update += " label";
+            qr_update += " SET status='1'";
+            qr_update += ",updated_at='" +dHENKOU + "'";
+            qr_update += " where id='"+ labelid+"'";
+
+            con.Open();
+            MySqlTransaction tran = con.BeginTransaction();
+            try
+            {
+                MySqlCommand c = new MySqlCommand(qr_update, con);
+                c.ExecuteNonQuery();
+                tran.Commit();
+                con.Close();
+            }
+            catch
+            {
+                try
+                {
+                    tran.Rollback();
+                }
+                catch
+                {
+                }
+                con.Close();
+                return false;
+            }
+
+            return true;
         }
     }
 }
