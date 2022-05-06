@@ -385,6 +385,12 @@
     }
 }
 
+@media (min-width: 481px) {
+    .UC02BoardDiv {
+        width: 274px;
+    }
+}
+
 .UC02FusentSuikaBtn {
     display: block !important;
     height: 30px;
