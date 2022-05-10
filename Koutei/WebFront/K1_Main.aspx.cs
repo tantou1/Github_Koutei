@@ -14,7 +14,6 @@ namespace Koutei.WebFront
 {
     public partial class K1_Main : System.Web.UI.Page
     {
-
         protected void Page_Load(object sender, EventArgs e)
         {            BindBoard();
         }
@@ -74,10 +73,10 @@ namespace Koutei.WebFront
             if (label.EndLable(lbId.Text))
             {
                 SpVoice spv = new SpVoice();
-                spv.Rate = 1;
-                spv.Volume = 100;
                 spv.Speak("おめでとうございます。");
+                spv.Rate = 1;
                 BindBoard();
+
             }
             else
             {
