@@ -21,9 +21,10 @@ namespace Koutei.UserControl
             //工程情報を表示の為
             lblKouteiId.Text = drFusen["koutei_id"].ToString();//工程コード
             lblKouteiName.Text = drFusen["koutei_name"].ToString();//工程イトル
-            lblLabelId.Text = "#"+drFusen["label_id"].ToString();//ラベルコード
+            lblLabelId.Text = drFusen["label_id"].ToString();//ラベルコード
             lbId.Text = drFusen["label_id"].ToString();//ラベルコード
             lblTitle.Text = drFusen["title"].ToString();//ラベルタイトル
+            lblAnkenId.Text = "#" + drFusen["anken_id"].ToString();//案件コード
         }
 
         protected void Button1_Click(object sender, EventArgs e)
