@@ -94,6 +94,15 @@ namespace Koutei.UserControl {
         protected global::System.Web.UI.WebControls.Label lbId;
         
         /// <summary>
+        /// Image コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image Image;
+        
+        /// <summary>
         /// bt_end コントロール。
         /// </summary>
         /// <remarks>

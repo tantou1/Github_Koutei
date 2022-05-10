@@ -11,7 +11,10 @@
         <asp:Label ID="lblStatus" runat="server" CssClass="DisplayNone"></asp:Label>
         <asp:Label ID="lbId" runat="server" CssClass="DisplayNone" />
     </div>
-    <div class="UC01DivHeight">
+    <div class="text-center">
+            <asp:Image ID="Image" runat="server" Width="100" Height="100" class="rounded" /><br />
+    </div>
+    <div class="UC01DivHeight">        
         <div style="float: right;">
             <asp:Button ID="bt_end" runat="server" Text="完了" CssClass="WhiteBackgroundButton1" OnClick="Button1_Click"/>
         </div>

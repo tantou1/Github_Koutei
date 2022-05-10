@@ -14,7 +14,30 @@
                 cursor: pointer;
                 margin-right: 12px;                
         }
+            .fileuploadbut {
+            border: none;
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            background-image:url('/Img/gallery.png') ;
+            background-repeat:no-repeat;
+            cursor:pointer;
+         }
     </style>
+
+    <script type="text/javascript">
+ 
+        function showBrowseDialog() {
+            var fileuploadctrl = document.getElementById('<%= FileUpload.ClientID %>');
+            fileuploadctrl.click();
+        }
+
+        function upload() {
+            var btn = document.getElementById('<%= hideButton.ClientID %>');
+            btn.click();
+        }        
+  </script>
+
 </head>
 <body class="bg-transparent">
 
@@ -38,6 +61,11 @@
                             <asp:CheckBoxList ID="CheckBoxList" runat="server" CssClass="bigcheck">
 
                             </asp:CheckBoxList>
+
+                            <div >                                <asp:Image ID="Image" runat="server" Width="100" Height="100" class="rounded mx-auto d-block"/><br />
+                            </div>
+                            <input type="button" class="fileuploadbut" onclick="showBrowseDialog()"/>
+
                             <div class="">
                                 <asp:Button ID="BT_Cancel" runat="server" Text="キャンセル" CssClass="WhiteBackgroundButton mb-3 " Width="100px" OnClick="BT_Cancel_Click"/>
                                 <asp:Button ID="BT_Save" runat="server" Text="追加" CssClass="BlueBackgroundButton mb-3 " autopostback="false" Width="100px" OnClick="BT_Save_Click" MaintainScrollPositionOnPostBack="true" />
@@ -50,7 +78,8 @@
                 
                 </ContentTemplate>
             </asp:UpdatePanel>
-        
+        <asp:Button runat="server" ID="hideButton" Text="" Style="display: none;" OnClick="UploadButton_Click" /> 
+        <asp:FileUpload ID="FileUpload" Style="display: none" runat="server" accept=".png,.jpg,.jpeg,.bmp,.gif" multiple="false" onchange="upload()" />
         <asp:HiddenField ID="hdnHome" runat="server" />
 
     </form>

@@ -21,11 +21,19 @@
         </asp:ScriptManager>
                  
         <div style="margin-left:4px;">
-             <asp:Button ID="btnFusenTsuika" runat="server" Text="＋タスクを追加" CssClass="UC02FusentSuikaBtn UC02MobileFusentSuikaBtn ml-3" role="button"
-            onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');" OnClick="btnFusenTsuika_Click" /> <br />
-        </div>      
-        
+            <div class="row ">
+                <div class="col col-md-auto">
+                    <asp:Button ID="btnFusenTsuika" runat="server" Text="＋タスクを追加" CssClass="UC02FusentSuikaBtn UC02MobileFusentSuikaBtn ml-3" role="button"
+                    onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');" OnClick="btnFusenTsuika_Click" /> <br />
+                     
+                </div>
+                <div class="col col-md-auto align-content-center">
+                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" />
+                </div>  
+            </div>
+        </div>    
      
+         <br/>
         <div class="row mx-0 ">
         <asp:UpdatePanel ID="updFusenMain" runat="server" UpdateMode="Conditional" >
             <ContentTemplate>

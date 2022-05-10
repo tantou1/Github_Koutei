@@ -12,7 +12,7 @@ namespace Service
     public class K2_Save_Class
     {
         public DateTime dHENKOU { get; set; }
-        public bool DataSave(DataTable dt, string stitle)
+        public bool DataSave(DataTable dt, string stitle, string photo_path, string filename)
         {
             MySqlConnection con = new MySqlConnection("Server=" + DBUtilitycs.Server + "; Database=" + DBUtilitycs.Database + "; User Id=" + DBUtilitycs.user + "; password=" + DBUtilitycs.pass);
 
@@ -98,6 +98,31 @@ namespace Service
                 sql_insert += ",'" + dt.Rows[r]["ckoutei"].ToString() + "'";
                 sql_insert += ",'" + dHENKOU + "'";
                 sql_insert += ",'" + dHENKOU + "'";
+                sql_insert += ");";
+                #endregion
+
+                #region 画像新規Query
+                sql_insert += @"INSERT INTO";
+                sql_insert += " m_file";
+                sql_insert += " (";
+                sql_insert += " cFILE";
+                sql_insert += " ,sPATH_SERVER_SOURCE";
+                sql_insert += " ,sFILE";
+                sql_insert += " ,sPATH_SUB_DIR";
+                sql_insert += " ,label_id";
+                sql_insert += " )";
+                sql_insert += " Values(";
+                sql_insert += "( select t.cFILE";
+                sql_insert += " from(SELECT case ifnull(max(mf.cFILE),'') when '' then 1 else max(mf.cFILE)+1 end as cFILE";
+                sql_insert += " FROM m_file mf";
+                sql_insert += ") t)";
+                sql_insert += ",'" + photo_path + "'";
+                sql_insert += ",'" + filename + "'";
+                sql_insert += ",'" + photo_path + "'";
+                sql_insert += ",(select tlb.id";
+                sql_insert += " from(SELECT max(lb.id) as id";
+                sql_insert += " FROM label lb";
+                sql_insert += ") tlb)";　//label最大コード取る
                 sql_insert += ");";
                 #endregion
             }
