@@ -11,6 +11,7 @@ namespace Service
 {
     public class K_ClientConnection_Class
     {
+        public DateTime dHENKOU { get; set; }
         public DataTable GetKoutei()
         {
             MySqlConnection con = new MySqlConnection("Server=" + DBUtilitycs.Server + "; Database=" + DBUtilitycs.Database + "; User Id=" + DBUtilitycs.user + "; password=" + DBUtilitycs.pass);
@@ -24,6 +25,14 @@ namespace Service
             }
             con.Close();
             return dt;
+        }
+        public string Getdhenkou()
+        {
+            MySqlConnection con = new MySqlConnection("Server=" + DBUtilitycs.Server + "; Database=" + DBUtilitycs.Database + "; User Id=" + DBUtilitycs.user + "; password=" + DBUtilitycs.pass);
+
+            dHENKOU = ConstantVal.Fu_GetDateTime(con);
+
+            return dHENKOU.ToString("yyyyMMddHHmmss");
         }
     }
 }

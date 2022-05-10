@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Common;
+using System.IO;
 
 namespace Koutei.WebFront
 {
@@ -71,10 +72,77 @@ namespace Koutei.WebFront
                     dt.Rows.Add(item.Value);
                 }
             }
+            string file_path = "";
+            string filename = "";
+            if (Session["filepath"] != null)
+            {
+                file_path = Session["filepath"].ToString();
+                file_path = file_path.Replace(@"\", @"\\");
+                filename = Path.GetFileName(file_path);
+            }
 
-            K2_Save_Class data_save = new K2_Save_Class();            if (!data_save.DataSave(dt, TB_taskname.Text))            {                return false;            }
+            K2_Save_Class data_save = new K2_Save_Class();            if (!data_save.DataSave(dt, TB_taskname.Text, file_path, filename))            {                return false;            }
             return true;
 
         }
+
+        protected void UploadButton_Click(object sender, EventArgs e)        {            if (FileUpload.HasFile)            {                try                {
+                    #region photoupload way1 (save server)
+                    //string folderPath = Server.MapPath("~/UploadImgFiles/");
+                    ////フォルダあるかどうかチェック
+                    //if (!Directory.Exists(folderPath))
+                    //{
+                    //    //フォルダ作成
+                    //    Directory.CreateDirectory(folderPath);
+                    //}
+
+                    //ファイル名取る
+                    string filename_ext = FileUpload.FileName;
+
+                    K_ClientConnection_Class dhenkou = new K_ClientConnection_Class();
+                    string s_datetime = dhenkou.Getdhenkou();//アップ日付取る
+
+                    string filename = filename_ext.Split('.')[0];
+                    string ext = filename_ext.Split('.')[1];
+
+                    filename = filename + s_datetime + "." + ext;//アップ日付を付けてアップファイル名を編集
+
+
+                    //FileUpload.SaveAs(folderPath + filename);//ファイルを保存
+
+
+                    string local_folderPath = @"C:\UploadImg\";
+                    if (!Directory.Exists(local_folderPath))
+                    {
+                        //フォルダを作成
+                        Directory.CreateDirectory(local_folderPath);
+                    }
+                    FileUpload.SaveAs(local_folderPath + filename);
+
+                    string file_path = local_folderPath + filename;
+
+                    string imgurl = "";
+                    #region 画像を表示
+                    if (File.Exists(file_path))
+                    {
+                        FileStream fs = new FileStream(file_path, FileMode.Open, FileAccess.Read);
+                        BinaryReader br = new BinaryReader(fs);
+                        Byte[] bt = br.ReadBytes((Int32)fs.Length);
+                        br.Close();
+                        fs.Close();
+                        string base64string = Convert.ToBase64String(bt, 0, bt.Length);
+
+                        imgurl = "data:image/png;base64," + base64string;
+                        Image.ImageUrl = imgurl;
+
+                        Session["filepath"] = file_path;
+
+
+                    }
+                    #endregion
+
+                    #endregion
+
+                }                catch (Exception) { }            }        }
     }
 }

@@ -1,4 +1,4 @@
-﻿/***************UC01FusenJouhou phyo************************/
+﻿/***************UC01FusenJouhou ************************/
 
 .UC01FusenDiv {
     position: relative;
@@ -25,7 +25,7 @@
 
 @media (min-width: 481px) {
     .UC01FusenDiv {
-        height: 86px;
+        height: 110px; /*86px to 110px changed yamin*/
         margin: 2px 10px 5px;
         width: 250px;
     }

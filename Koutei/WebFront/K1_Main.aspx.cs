@@ -25,9 +25,18 @@ namespace Koutei.WebFront
         {
             PinChange();
 
-            K_ClientConnection_Class test = new K_ClientConnection_Class();            DataTable dt = test.GetKoutei();            K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();            DataTable dtLabel = label.Get_Label();            for (int i = 0; i < dt.Rows.Count; i++)            {
+            K_ClientConnection_Class test = new K_ClientConnection_Class();            DataTable dt = test.GetKoutei();            K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();            DataTable dtLabel = label.Get_Label(chk_santo.Checked);            for (int i = 0; i < dt.Rows.Count; i++)            {                DataRow[] drresult = dtLabel.Select("koutei_id = " + dt.Rows[i]["id"].ToString());                DataTable dt_label_koutei = dtLabel.Clone();                if (drresult.Length > 0)                {                    dt_label_koutei = drresult.CopyToDataTable();                }
+
                 //工程ボードを設定する
-                UC01board ucBoard = (UC01board)LoadControl("~/UserControl/UC01board.ascx");                ucBoard.ID = "ucPending" + dt.Rows[i]["id"].ToString();                Session["BoardName"] = dt.Rows[i]["title"].ToString();                Session["BoardID"] = dt.Rows[i]["id"].ToString();                Session["TaskCount"] = label.Get_TaskCount(dt.Rows[i]["id"].ToString());                ucBoard.SetPendingFusenBoardData();                pnlPending.Controls.Add(ucBoard);                DataRow[] drresult = dtLabel.Select("koutei_id = " + dt.Rows[i]["id"].ToString());                DataTable dt_label_koutei = dtLabel.Clone();                if (drresult.Length > 0)                {                    dt_label_koutei = drresult.CopyToDataTable();                }
+                UC01board ucBoard = (UC01board)LoadControl("~/UserControl/UC01board.ascx");                ucBoard.ID = "ucPending" + dt.Rows[i]["id"].ToString();                Session["BoardName"] = dt.Rows[i]["title"].ToString();                Session["BoardID"] = dt.Rows[i]["id"].ToString();
+                //Session["TaskCount"] = label.Get_TaskCount(dt.Rows[i]["id"].ToString());
+                if (dt_label_koutei.Rows.Count > 0)
+                {
+                    Session["TaskCount"] = dt_label_koutei.Rows.Count.ToString();
+                }                else
+                {
+                    Session["TaskCount"] = "";
+                }                ucBoard.SetPendingFusenBoardData();                pnlPending.Controls.Add(ucBoard);
 
                 //工程ボードの中に付箋を設定する
                 Panel pnlFusen = (Panel)ucBoard.FindControl("pnlFusen");                if (dt_label_koutei.Rows.Count > 0)                {                    for (int j = 0; j < dt_label_koutei.Rows.Count; j++)                    {                        UC02Label ucLabelJouhou = (UC02Label)LoadControl("~/UserControl/UC02Label.ascx");                        ucLabelJouhou.ID = "uc" + (j + 1);                        ucLabelJouhou.SetFusenJouhou(dt_label_koutei.Rows[j]);
@@ -61,6 +70,11 @@ namespace Koutei.WebFront
             updShinkiPopup.Update();
         }
 
+        protected void chk_santo_CheckedChanged(object sender, EventArgs e)
+        {
+            BindBoard();
+        }
+
         public void HandleDeleteLabel(object sender, EventArgs e)
         {
             Button btnDelete = (sender as Button);
@@ -82,7 +96,7 @@ namespace Koutei.WebFront
                 BindBoard();
 
                 string from, pass, messageBody = "";
-                string receivemail = "ayehtet4198@gmail.com";
+                string receivemail = "comnetyamin93@gmail.com";
                 MailMessage message = new MailMessage();
                 //to = "minazou0417@gmail.com";
                 to = receivemail;
