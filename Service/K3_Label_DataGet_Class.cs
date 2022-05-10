@@ -19,6 +19,7 @@ namespace Service
             String qr = "SELECT";
             qr += " lb.id as label_id";
             qr += " ,lb.title title";
+            qr += ",lb.anken_id as anken_id";
             qr += " ,bo.label_order label_order";
             qr += " ,bo.koutei_id koutei_id";
             qr += " ,k.title koutei_name";
@@ -75,6 +76,29 @@ namespace Service
             }
 
             return true;
+        }
+
+        public string Get_TaskCount(string koutei_id)
+        {
+            MySqlConnection con = new MySqlConnection("Server=" + DBUtilitycs.Server + "; Database=" + DBUtilitycs.Database + "; User Id=" + DBUtilitycs.user + "; password=" + DBUtilitycs.pass);
+            String qr = "SELECT";
+            qr += " count(koutei_id) as koutei_id";
+            qr += " from board bo";
+            qr += " inner join label lb";
+            qr += " on bo.label_id= lb.id";
+            qr += " where status='0' and";
+            qr += " koutei_id='" + koutei_id + "'";
+
+            DataTable dt = new DataTable();
+
+            con.Close();
+            con.Open();
+            using (MySqlDataAdapter adap = new MySqlDataAdapter(qr, con))
+            {
+                adap.Fill(dt);
+            }
+            con.Close();
+            return dt.Rows[0][0].ToString();
         }
     }
 }

@@ -24,7 +24,10 @@ namespace Koutei.UserControl
             divPendingHeader.Style.Add("display", "block");
             lblPendingHeader.Text = Session["BoardName"].ToString();
             lblPendingHeader_ID.Text = Session["BoardID"].ToString();
-            
+            if (Session["TaskCount"].ToString() != "0")
+            {
+                lblcount.Text = Session["TaskCount"].ToString();
+            }
             divFusenList.Style.Add("background-color", "rgb(197,224,245)");
         }
 

@@ -31,6 +31,15 @@ namespace Koutei.UserControl {
         protected global::System.Web.UI.WebControls.Label lblLabelId;
         
         /// <summary>
+        /// lblAnkenId コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAnkenId;
+        
+        /// <summary>
         /// lblTitle コントロール。
         /// </summary>
         /// <remarks>

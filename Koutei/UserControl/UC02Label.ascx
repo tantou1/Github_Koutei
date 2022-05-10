@@ -2,7 +2,8 @@
 
 <div class="UC01FusenDiv" id="divFusenJouhou" runat="server">
     <div>
-        <asp:Label ID="lblLabelId" runat="server" CssClass="UC01AnkenIdLbl" ></asp:Label><br />
+        <asp:Label ID="lblLabelId" runat="server" CssClass="DisplayNone" ></asp:Label>
+        <asp:Label ID="lblAnkenId" runat="server" CssClass="UC01AnkenIdLbl" ></asp:Label><br />
         <asp:Label ID="lblTitle" runat="server" ></asp:Label><br />
         <asp:Label ID="lblKouteiId" runat="server" CssClass="DisplayNone"></asp:Label>
         <asp:Label ID="lblKouteiName" runat="server" CssClass="DisplayNone"></asp:Label>
