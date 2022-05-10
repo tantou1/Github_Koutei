@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,6 +17,7 @@ namespace Koutei.WebFront
 {
     public partial class K1_Main : System.Web.UI.Page
     {
+        public static string to, tomail;
         protected void Page_Load(object sender, EventArgs e)
         {            BindBoard();
         }
@@ -76,6 +80,39 @@ namespace Koutei.WebFront
                 spv.Speak("おめでとうございます。");
                 spv.Rate = 1;
                 BindBoard();
+
+                string from, pass, messageBody = "";
+                string receivemail = "ayehtet4198@gmail.com";
+                MailMessage message = new MailMessage();
+                //to = "minazou0417@gmail.com";
+                to = receivemail;
+                from = ConfigurationManager.AppSettings["SMTP_Sender"];
+                pass = ConfigurationManager.AppSettings["SMTP_Password"];
+                messageBody = "工程完了しました。";
+                message.To.Add(to);
+                message.From = new MailAddress(from, ConfigurationManager.AppSettings["SMTP_SenderName"]);
+                message.Body = messageBody;
+                message.Subject = "工程完了";
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = ConfigurationManager.AppSettings["SMTP_Host"];
+                smtp.Timeout = int.Parse(ConfigurationManager.AppSettings["SMTP_Timeout"]);
+                smtp.EnableSsl = true;
+                smtp.Port = int.Parse(ConfigurationManager.AppSettings["SMTP_Port"]);
+                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smtp.UseDefaultCredentials = false;
+                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+                smtp.Credentials = new NetworkCredential(from, pass);
+                smtp.EnableSsl = true;
+                try
+                {
+                    tomail = receivemail;
+                    smtp.Send(message);
+
+                }
+                catch (Exception ex)
+                {
+                    Response.Write("<script>alert('" + ex.Message + "');</script>");
+                }
 
             }
             else
