@@ -8,7 +8,15 @@
   
    
     <title></title>
-
+    <style>
+         .bigcheck input {
+                width: 17px;
+                height: 17px;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-right: 12px;                
+        }
+    </style>
 </head>
   
 <body style="background-color:lightgray;">
@@ -19,21 +27,20 @@
                 <asp:ScriptReference Path="../Scripts/Common/FixFocus.js" />
             </Scripts>           
         </asp:ScriptManager>
-                 
-        <div style="margin-left:4px;">
+        <div class="container-fluid">
+            <div style="margin-left:4px;">
             <div class="row ">
                 <div class="col col-md-auto">
                     <asp:Button ID="btnFusenTsuika" runat="server" Text="＋タスクを追加" CssClass="UC02FusentSuikaBtn UC02MobileFusentSuikaBtn ml-3" role="button"
                     onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');" OnClick="btnFusenTsuika_Click" /> <br />
                      
                 </div>
-                <div class="col col-md-auto align-content-center">
-                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" />
+                <div class="col col-md-auto align-content-center mt-2">
+                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" />
                 </div>  
             </div>
         </div>    
      
-         <br/>
         <div class="row mx-0 ">
         <asp:UpdatePanel ID="updFusenMain" runat="server" UpdateMode="Conditional" >
             <ContentTemplate>
@@ -55,6 +62,8 @@
 
             
     </div>
+        </div>        
+        
         <asp:UpdatePanel ID="updShinkiPopup" runat="server" UpdateMode="Conditional">
                 <ContentTemplate>
                     <asp:Button ID="btnShinkiPopup" runat="server" Text="Button" Style="display: none" />
@@ -63,10 +72,12 @@
                         RepositionMode="RepositionOnWindowResize">
                     </asp:ModalPopupExtender>
                     <asp:Panel ID="pnlShinkiPopupScroll" runat="server" Style="display: none;height:100%;overflow:hidden;" CssClass="PopupScrollDiv">
-                        <asp:Panel ID="pnlShinkiPopup" runat="server">
-                            <iframe id="ifShinkiPopup" runat="server" scrolling="yes"  style="height:100vh;width:100vw;"></iframe>
-                            <asp:Button ID="btn_ClosePopup" runat="server" Text="Button" CssClass="" OnClick="btn_ClosePopup_Click" />
-                            <asp:Button ID="btn_SavePopup" runat="server" Text="Button" CssClass="" />
+                        <asp:Panel ID="pnlShinkiPopup" runat="server" BorderStyle="None">
+                            <iframe id="ifShinkiPopup" runat="server" scrolling="yes"  style="height:100vh;width:100vw;border:none;"></iframe>
+                            <div style="display:none;">
+                                <asp:Button ID="btn_ClosePopup" runat="server" Text="Button" CssClass="" OnClick="btn_ClosePopup_Click" />
+                                <asp:Button ID="btn_SavePopup" runat="server" Text="Button" CssClass="" />
+                            </div>
                         </asp:Panel>
                     </asp:Panel>
                 </ContentTemplate>
