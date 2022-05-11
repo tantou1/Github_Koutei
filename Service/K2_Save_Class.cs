@@ -137,7 +137,7 @@ namespace Service
                 tran.Commit();
                 con.Close();
             }
-            catch
+            catch(Exception ex)
             {
                 try
                 {
