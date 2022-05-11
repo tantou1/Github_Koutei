@@ -18,7 +18,7 @@ namespace Koutei.WebFront
         {
             if (!this.IsPostBack)
             {
-
+                Session["filepath"] = "";
                 if (SessionUtility.GetSession("HOME") != null)
                 {
                     hdnHome.Value = SessionUtility.GetSession("HOME").ToString();
