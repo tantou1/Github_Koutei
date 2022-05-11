@@ -18,7 +18,7 @@ namespace Koutei.WebFront
         {
             if (!this.IsPostBack)
             {
-
+                Session["filepath"] = "";
                 if (SessionUtility.GetSession("HOME") != null)
                 {
                     hdnHome.Value = SessionUtility.GetSession("HOME").ToString();
@@ -76,9 +76,13 @@ namespace Koutei.WebFront
             string filename = "";
             if (Session["filepath"] != null)
             {
-                file_path = Session["filepath"].ToString();
-                file_path = file_path.Replace(@"\", @"\\");
-                filename = Path.GetFileName(file_path);
+                if (Session["filepath"].ToString() !="")
+                {
+
+                    file_path = Session["filepath"].ToString();
+                    file_path = file_path.Replace(@"\", @"\\");
+                    filename = Path.GetFileName(file_path);
+                }
             }
 
             K2_Save_Class data_save = new K2_Save_Class();            if (!data_save.DataSave(dt, TB_taskname.Text, file_path, filename))            {                return false;            }
