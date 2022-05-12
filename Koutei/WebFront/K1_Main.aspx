@@ -3,7 +3,7 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml"><head runat="server"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    <link href="../Content/bootstrap.min.css" rel="stylesheet" />        <script src="../Scripts/bootstrap.bundle.min.css"></script>
+<html xmlns="http://www.w3.org/1999/xhtml"><head runat="server"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    <link href="../Content/bootstrap.min.css" rel="stylesheet" />        <script src="../Scripts/bootstrap.bundle.min.css"></script><script src="../Scripts/Common/Common.js"></script>
    <asp:PlaceHolder runat="server">             <%: Styles.Render("~/style/StyleBundle2") %>             <%: Styles.Render("~/style/UCStyleBundle") %>        <%: Scripts.Render("~/scripts/ScriptBundle1") %>        </asp:PlaceHolder> 
   
    
@@ -16,6 +16,7 @@
                 cursor: pointer;
                 margin-right: 12px;                
         }
+
     </style>
 </head>
   
@@ -36,7 +37,7 @@
                      
                 </div>
                 <div class="col col-md-auto align-content-center mt-2">
-                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" />
+                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" OnCheckedChanged="chk_santo_CheckedChanged" />
                 </div>  
             </div>
         </div>    
@@ -59,10 +60,9 @@
                 </span>--%>
              </ContentTemplate>
         </asp:UpdatePanel>
-
             
-    </div>
-        </div>        
+        </div>
+    </div>        
         
         <asp:UpdatePanel ID="updShinkiPopup" runat="server" UpdateMode="Conditional">
                 <ContentTemplate>
@@ -82,6 +82,7 @@
                     </asp:Panel>
                 </ContentTemplate>
             </asp:UpdatePanel>
+
     </form>
 </body>
 </html>
