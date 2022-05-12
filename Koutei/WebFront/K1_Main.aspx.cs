@@ -19,13 +19,26 @@ namespace Koutei.WebFront
     {
         public static string to, tomail;
         protected void Page_Load(object sender, EventArgs e)
-        {            BindBoard();
+        {
+            if (!this.IsPostBack)
+            {
+                messge_set();
+            }
+            get_data_DB();
+            BindBoard();
         }
         private void BindBoard()
         {
             PinChange();
 
-            K_ClientConnection_Class test = new K_ClientConnection_Class();            DataTable dt = test.GetKoutei();            K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();            DataTable dtLabel = label.Get_Label(chk_santo.Checked);            for (int i = 0; i < dt.Rows.Count; i++)            {                DataRow[] drresult = dtLabel.Select("koutei_id = " + dt.Rows[i]["id"].ToString());                DataTable dt_label_koutei = dtLabel.Clone();                if (drresult.Length > 0)                {                    dt_label_koutei = drresult.CopyToDataTable();                }
+            //K_ClientConnection_Class test = new K_ClientConnection_Class();
+            //DataTable dt = test.GetKoutei();
+
+            //K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();
+            //DataTable dtLabel = label.Get_Label(chk_santo.Checked);
+
+
+            DataTable dt = Session["dt"] as DataTable;            DataTable dtLabel = Session["dtLabel"] as DataTable;            for (int i = 0; i < dt.Rows.Count; i++)            {                DataRow[] drresult = dtLabel.Select("koutei_id = " + dt.Rows[i]["id"].ToString());                DataTable dt_label_koutei = dtLabel.Clone();                if (drresult.Length > 0)                {                    dt_label_koutei = drresult.CopyToDataTable();                }
 
                 //工程ボードを設定する
                 UC01board ucBoard = (UC01board)LoadControl("~/UserControl/UC01board.ascx");                ucBoard.ID = "ucPending" + dt.Rows[i]["id"].ToString();                Session["BoardName"] = dt.Rows[i]["title"].ToString();                Session["BoardID"] = dt.Rows[i]["id"].ToString();
@@ -72,7 +85,8 @@ namespace Koutei.WebFront
 
         protected void chk_santo_CheckedChanged(object sender, EventArgs e)
         {
-            BindBoard();
+            //get_data_DB();
+            //BindBoard();
         }
 
         public void HandleDeleteLabel(object sender, EventArgs e)
@@ -81,59 +95,83 @@ namespace Koutei.WebFront
             UC02Label uc02label = (UC02Label)btnDelete.NamingContainer;
             Label lbId = uc02label.FindControl("lbId") as Label;
 
-            UC01board ucBoard = (UC01board)LoadControl("~/UserControl/UC01board.ascx");
+            //UC01board ucBoard = (UC01board)LoadControl("~/UserControl/UC01board.ascx");
 
-            Panel pnlFusen = (Panel)ucBoard.FindControl("pnlFusen");
-            pnlFusen.Controls.Remove(uc02label);
-            updFusenMain.Update();           
+            //Panel pnlFusen = (Panel)ucBoard.FindControl("pnlFusen");
+            //pnlFusen.Controls.Remove(uc02label);
+            //updFusenMain.Update();
 
             K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();
             if (label.EndLable(lbId.Text))
             {
-                SpVoice spv = new SpVoice();
-                spv.Speak("おめでとうございます。");
-                spv.Rate = 1;
+                //SpVoice spv = new SpVoice();
+                //spv.Speak("おめでとうございます。");
+                //spv.Rate = 1;
+                get_data_DB();
                 BindBoard();
-
-                string from, pass, messageBody = "";
-                string receivemail = "comnetyamin93@gmail.com";
-                MailMessage message = new MailMessage();
-                //to = "minazou0417@gmail.com";
-                to = receivemail;
-                from = ConfigurationManager.AppSettings["SMTP_Sender"];
-                pass = ConfigurationManager.AppSettings["SMTP_Password"];
-                messageBody = "工程完了しました。";
-                message.To.Add(to);
-                message.From = new MailAddress(from, ConfigurationManager.AppSettings["SMTP_SenderName"]);
-                message.Body = messageBody;
-                message.Subject = "工程完了";
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = ConfigurationManager.AppSettings["SMTP_Host"];
-                smtp.Timeout = int.Parse(ConfigurationManager.AppSettings["SMTP_Timeout"]);
-                smtp.EnableSsl = true;
-                smtp.Port = int.Parse(ConfigurationManager.AppSettings["SMTP_Port"]);
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtp.UseDefaultCredentials = false;
-                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
-                smtp.Credentials = new NetworkCredential(from, pass);
-                smtp.EnableSsl = true;
-                try
-                {
-                    tomail = receivemail;
-                    smtp.Send(message);
-
-                }
-                catch (Exception ex)
-                {
-                    Response.Write("<script>alert('" + ex.Message + "');</script>");
-                }
-
+                mailsend();
             }
             else
             {
                 return;
             }            
 
+        }
+
+
+        private void get_data_DB()
+        {
+            K_ClientConnection_Class test = new K_ClientConnection_Class();
+            DataTable dt = test.GetKoutei();
+            Session.Add("dt", dt);
+
+            K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();
+            DataTable dtLabel = label.Get_Label(chk_santo.Checked);
+            Session.Add("dtLabel", dtLabel);
+        }
+        private void mailsend()
+        {
+            try
+            {
+                MailMessage message = Session["message"] as MailMessage;
+                message.To.Add("comnetyamin93@gmail.com");
+                SmtpClient smtp = Session["smtp"] as SmtpClient;
+                smtp.Send(message);
+
+            }
+            catch (Exception ex)
+            {
+                Response.Write("<script>alert('" + ex.Message + "');</script>");
+            }
+        }
+
+        private void messge_set()
+        {
+
+            string from, pass, messageBody = "";
+            string receivemail = ConfigurationManager.AppSettings["SMTP_Sender"];
+            MailMessage message = new MailMessage();
+            //to = "minazou0417@gmail.com";
+            to = receivemail;
+            from = ConfigurationManager.AppSettings["SMTP_Sender"];
+            pass = ConfigurationManager.AppSettings["SMTP_Password"];
+            messageBody = "工程完了しました。";
+            message.To.Add(to);
+            message.From = new MailAddress(from, ConfigurationManager.AppSettings["SMTP_SenderName"]);
+            message.Body = messageBody;
+            message.Subject = "工程完了";
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = ConfigurationManager.AppSettings["SMTP_Host"];
+            smtp.Timeout = int.Parse(ConfigurationManager.AppSettings["SMTP_Timeout"]);
+            smtp.EnableSsl = true;
+            smtp.Port = int.Parse(ConfigurationManager.AppSettings["SMTP_Port"]);
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.UseDefaultCredentials = false;
+            ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+            smtp.Credentials = new NetworkCredential(from, pass);
+            smtp.EnableSsl = true;
+            Session.Add("message", message);
+            Session.Add("smtp", smtp);
         }
 
     }

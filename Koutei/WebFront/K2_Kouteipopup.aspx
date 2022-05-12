@@ -19,7 +19,7 @@
             background-size: cover;
             width: 50px;
             height: 50px;
-            background-image:url('/Img/gallery.png') ;
+            background-image:url('/Img/camera.jpg') ;
             background-repeat:no-repeat;
             cursor:pointer;
          }
@@ -64,7 +64,7 @@
 
                             <div >                                <asp:Image ID="Image" runat="server" Width="100" Height="100" class="rounded mx-auto d-block"/><br />
                             </div>
-                            <input type="button" class="fileuploadbut" onclick="showBrowseDialog()"/>
+                            <input type="button" class="fileuploadbut" onclick="showBrowseDialog()" />
 
                             <div class="">
                                 <asp:Button ID="BT_Cancel" runat="server" Text="キャンセル" CssClass="WhiteBackgroundButton mb-3 " Width="100px" OnClick="BT_Cancel_Click"/>

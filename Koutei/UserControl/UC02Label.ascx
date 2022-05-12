@@ -1,5 +1,12 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UC02Label.ascx.cs" Inherits="Koutei.UserControl.UC02Label" %>
 
+<script>
+  function playSound() {
+  var audio = new Audio('../sound/歓声と拍手2.mp3');
+      audio.play();
+    }    
+</script>
+
 <div class="UC01FusenDiv" id="divFusenJouhou" runat="server">
     <div>
         <asp:Label ID="lblLabelId" runat="server" CssClass="DisplayNone" ></asp:Label>
@@ -16,7 +23,7 @@
     </div>
     <div class="UC01DivHeight">        
         <div style="float: right;">
-            <asp:Button ID="bt_end" runat="server" Text="完了" CssClass="WhiteBackgroundButton1" OnClick="Button1_Click"/>
+            <asp:Button ID="bt_end" runat="server" Text="完了" CssClass="WhiteBackgroundButton1" OnClick="Button1_Click" OnClientClick="playSound();"/>
         </div>
     </div>
 </div>

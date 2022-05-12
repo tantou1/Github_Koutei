@@ -132,6 +132,7 @@
     <Content Include="DLL\MySql.Data.dll" />
     <Content Include="DLL\Service.dll" />
     <Content Include="Global.asax" />
+    <Content Include="Img\camera.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -142,6 +143,8 @@
     <Content Include="Scripts\Common\jquery.zip2addr.js" />
     <Content Include="Scripts\Common\moment.min.js" />
     <Content Include="Bundle.config" />
+    <Content Include="sound\mixkit-medium-size-group-applause-and-laugh-516.wav" />
+    <Content Include="sound\歓声と拍手2.mp3" />
     <Content Include="UserControl\UC02Label.ascx" />
     <Content Include="WebFront\K2_Kouteipopup.aspx" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
