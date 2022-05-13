@@ -49,6 +49,33 @@ namespace Koutei.WebFront {
         protected global::System.Web.UI.WebControls.CheckBox chk_santo;
         
         /// <summary>
+        /// div_image コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_image;
+        
+        /// <summary>
+        /// loading コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image loading;
+        
+        /// <summary>
+        /// div_board コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_board;
+        
+        /// <summary>
         /// updFusenMain コントロール。
         /// </summary>
         /// <remarks>
@@ -65,15 +92,6 @@ namespace Koutei.WebFront {
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnlPending;
-        
-        /// <summary>
-        /// pnlFusenMain コントロール。
-        /// </summary>
-        /// <remarks>
-        /// 自動生成されたフィールド。
-        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFusenMain;
         
         /// <summary>
         /// updShinkiPopup コントロール。

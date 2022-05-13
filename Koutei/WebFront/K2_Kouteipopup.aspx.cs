@@ -25,8 +25,9 @@ namespace Koutei.WebFront
                     SessionUtility.SetSession("HOME", null);
                 }
                 TB_taskname.Focus();
-                K_ClientConnection_Class test = new K_ClientConnection_Class();
-                DataTable dt = test.GetKoutei();
+                //K_ClientConnection_Class test = new K_ClientConnection_Class();
+                //DataTable dt = test.GetKoutei();
+                DataTable dt = Session["dt"] as DataTable;
                 //ポップアップにチェックボックスを作成のため
                 foreach (DataRow row in dt.Rows)
                 {

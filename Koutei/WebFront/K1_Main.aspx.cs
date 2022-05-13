@@ -17,9 +17,12 @@ namespace Koutei.WebFront
 {
     public partial class K1_Main : System.Web.UI.Page
     {
+
         public static string to, tomail;
         protected void Page_Load(object sender, EventArgs e)
         {
+            //div_board.Visible = false;
+            div_image.Visible = true;
             if (!this.IsPostBack)
             {
                 messge_set();
@@ -27,15 +30,22 @@ namespace Koutei.WebFront
             get_data_DB();
             BindBoard();
         }
-        private void BindBoard()
+        protected void Page_LoadComplete(object sender, EventArgs e)
         {
-            PinChange();
+
+        }
+            private void BindBoard()
+        {
+            //PinChange();
+
+           
 
             //K_ClientConnection_Class test = new K_ClientConnection_Class();
             //DataTable dt = test.GetKoutei();
 
             //K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();
             //DataTable dtLabel = label.Get_Label(chk_santo.Checked);
+
 
 
             DataTable dt = Session["dt"] as DataTable;            DataTable dtLabel = Session["dtLabel"] as DataTable;            for (int i = 0; i < dt.Rows.Count; i++)            {                DataRow[] drresult = dtLabel.Select("koutei_id = " + dt.Rows[i]["id"].ToString());                DataTable dt_label_koutei = dtLabel.Clone();                if (drresult.Length > 0)                {                    dt_label_koutei = drresult.CopyToDataTable();                }
@@ -56,15 +66,14 @@ namespace Koutei.WebFront
                         ucLabelJouhou.DeleteLabel += this.HandleDeleteLabel;
                         pnlFusen.Controls.Add(ucLabelJouhou);                    }                }            }
             updFusenMain.Update();
-
         }
 
         protected void PinChange()
         {
-            pnlFusenMain.CssClass = "M02FusenMainDiv";
+            //pnlFusenMain.CssClass = "M02FusenMainDiv";
             pnlPending.CssClass = "M02PendingDiv";
-            pnlFusenMain.Style.Add("display", "none");
-            pnlFusenMain.Controls.Clear();
+            //pnlFusenMain.Style.Add("display", "none");
+            //pnlFusenMain.Controls.Clear();
             pnlPending.Controls.Clear();
         }
 
