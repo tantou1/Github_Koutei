@@ -133,6 +133,7 @@
     <Content Include="DLL\Service.dll" />
     <Content Include="Global.asax" />
     <Content Include="Img\camera.jpg" />
+    <Content Include="Img\loading.gif" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />

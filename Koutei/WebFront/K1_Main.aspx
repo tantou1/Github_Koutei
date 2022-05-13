@@ -6,7 +6,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head runat="server"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    <link href="../Content/bootstrap.min.css" rel="stylesheet" />        <script src="../Scripts/bootstrap.bundle.min.css"></script><script src="../Scripts/Common/Common.js"></script>
    <asp:PlaceHolder runat="server">             <%: Styles.Render("~/style/StyleBundle2") %>             <%: Styles.Render("~/style/UCStyleBundle") %>        <%: Scripts.Render("~/scripts/ScriptBundle1") %>        </asp:PlaceHolder> 
   
-   
+  <script>
+      window.onload = function() {		
+		//ここで本体を表示にさせる
+          document.getElementById('div_image').style.display = 'none';
+          document.getElementById('div_board').style.display = 'block';
+            //alert('ページの読み込みが完了したよ！');   
+}
+</script>
     <title></title>
     <style>
          .bigcheck input {
@@ -28,7 +35,7 @@
                 <asp:ScriptReference Path="../Scripts/Common/FixFocus.js" />
             </Scripts>           
         </asp:ScriptManager>
-        <div class="container-fluid">
+        <div class="container-fluid" >
             <div style="margin-left:4px;">
             <div class="row ">
                 <div class="col col-md-auto">
@@ -42,12 +49,17 @@
             </div>
         </div>    
      
-        <div class="row mx-0 ">
+        <div class="row mx-0 " id="div_image" runat="server" style="display:block;">
+           <asp:Image ID="loading" runat="server" ImageUrl="../Img/loading.gif" CssClass="TooltipLbl" Width="100" Height="100" class="rounded mx-auto d-block"/>
+           
+                    
+        </div>
+        <div class="row mx-0 " id="div_board" runat="server" style="display:none;">
         <asp:UpdatePanel ID="updFusenMain" runat="server" UpdateMode="Conditional" >
             <ContentTemplate>
                 <asp:Panel ID="pnlPending" runat="server" class="M02PendingDiv"></asp:Panel>
-                <asp:Panel ID="pnlFusenMain" runat="server" class="M02FusenMainDiv">
-                </asp:Panel>
+                <%--<asp:Panel ID="pnlFusenMain" runat="server" class="M02FusenMainDiv">
+                </asp:Panel>--%>
                 <%--<asp:HiddenField ID="hdnSourceId" runat="server" />
                 <asp:HiddenField ID="hdnTargetId" runat="server" />
                 <asp:HiddenField ID="hdnFusenId" runat="server" />

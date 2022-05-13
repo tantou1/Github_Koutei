@@ -10,11 +10,7 @@ namespace Koutei.UserControl
 {
     public partial class UC01board : System.Web.UI.UserControl
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
         #region "工程ボードに付箋データ設定"
 
         public void SetPendingFusenBoardData()

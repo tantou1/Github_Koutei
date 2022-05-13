@@ -12,10 +12,6 @@ namespace Koutei.UserControl
     public partial class UC02Label : System.Web.UI.UserControl
     {
         public event EventHandler DeleteLabel;
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
         public void SetFusenJouhou(DataRow drFusen)
         {
             //工程情報を表示の為
@@ -40,8 +36,11 @@ namespace Koutei.UserControl
                     string base64string = Convert.ToBase64String(bt, 0, bt.Length);
 
                     string imgurl = "data:image/png;base64," + base64string;
+
                     Image.ImageUrl = imgurl;
+
                     divFusenJouhou.Attributes.Add("style", "height:186px");
+                    
                 }
                 else
                 {
