@@ -31,6 +31,15 @@ namespace Koutei.WebFront {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// btn_SaishinJyouhou コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_SaishinJyouhou;
+        
+        /// <summary>
         /// btnFusenTsuika コントロール。
         /// </summary>
         /// <remarks>
@@ -38,6 +47,24 @@ namespace Koutei.WebFront {
         /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnFusenTsuika;
+        
+        /// <summary>
+        /// UpdTaskTsuika コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel UpdTaskTsuika;
+        
+        /// <summary>
+        /// pnlTask コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel pnlTask;
         
         /// <summary>
         /// chk_santo コントロール。
