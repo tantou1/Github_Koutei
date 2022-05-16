@@ -76,6 +76,15 @@ namespace Koutei.WebFront {
         protected global::System.Web.UI.WebControls.Image Image;
         
         /// <summary>
+        /// BT_I_Uplaod コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton BT_I_Uplaod;
+        
+        /// <summary>
         /// BT_Cancel コントロール。
         /// </summary>
         /// <remarks>

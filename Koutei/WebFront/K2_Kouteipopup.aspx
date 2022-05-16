@@ -64,8 +64,8 @@
 
                             <div >                                <asp:Image ID="Image" runat="server" Width="100" Height="100" class="rounded mx-auto d-block"/><br />
                             </div>
-                            <input type="button" class="fileuploadbut" onclick="showBrowseDialog()" />
-
+                            <%--<input type="button" class="fileuploadbut" onclick="showBrowseDialog()" />--%>
+                             <asp:ImageButton ID="BT_I_Uplaod" runat="server" class="fileuploadbut" ImageUrl="../Img/camera.jpg" OnClientClick="showBrowseDialog();" />
                             <div class="">
                                 <asp:Button ID="BT_Cancel" runat="server" Text="キャンセル" CssClass="WhiteBackgroundButton mb-3 " Width="100px" OnClick="BT_Cancel_Click"/>
                                 <asp:Button ID="BT_Save" runat="server" Text="追加" CssClass="BlueBackgroundButton mb-3 " autopostback="false" Width="100px" OnClick="BT_Save_Click" MaintainScrollPositionOnPostBack="true" />
