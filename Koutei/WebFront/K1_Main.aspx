@@ -51,7 +51,7 @@
                      
                 </div>
                 <div class="col col-md-auto align-content-center mt-2">
-                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" OnCheckedChanged="chk_santo_CheckedChanged" OnClientClick="displayLoadingModal();"/>
+                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" OnCheckedChanged="chk_santo_CheckedChanged" Onchange="displayLoadingModal();"/>
                 </div>  
             </div>
         </div>    

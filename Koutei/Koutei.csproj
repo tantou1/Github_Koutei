@@ -254,6 +254,7 @@
     <Content Include="sound\mixkit-medium-size-group-applause-and-laugh-516.wav" />
     <Content Include="sound\歓声と拍手2.mp3" />
     <Content Include="UserControl\UC02Label.ascx" />
+    <Content Include="UserControl\UC03Main.ascx" />
     <Content Include="WebFront\K2_Kouteipopup.aspx" />
     <None Include="Scripts\jquery-3.5.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.5.1.js" />
@@ -338,6 +339,13 @@
     </Compile>
     <Compile Include="UserControl\UC02Label.ascx.designer.cs">
       <DependentUpon>UC02Label.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\UC03Main.ascx.cs">
+      <DependentUpon>UC03Main.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControl\UC03Main.ascx.designer.cs">
+      <DependentUpon>UC03Main.ascx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
