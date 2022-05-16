@@ -21,8 +21,7 @@ namespace Koutei.WebFront
         public static string to, tomail;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //div_board.Visible = false;
-            div_image.Visible = true;
+
             if (!this.IsPostBack)
             {
                 messge_set();
@@ -36,9 +35,8 @@ namespace Koutei.WebFront
         }
             private void BindBoard()
         {
-            //PinChange();
-
-           
+            
+            PinChange();
 
             //K_ClientConnection_Class test = new K_ClientConnection_Class();
             //DataTable dt = test.GetKoutei();
@@ -70,15 +68,21 @@ namespace Koutei.WebFront
 
         protected void PinChange()
         {
-            //pnlFusenMain.CssClass = "M02FusenMainDiv";
+            pnlFusenMain.CssClass = "M02FusenMainDiv";
             pnlPending.CssClass = "M02PendingDiv";
-            //pnlFusenMain.Style.Add("display", "none");
-            //pnlFusenMain.Controls.Clear();
+            div_board.Style.Add("display", "none");
+            pnlFusenMain.Style.Add("display", "none");
+            pnlFusenMain.Controls.Clear();
             pnlPending.Controls.Clear();
         }
 
         protected void btnFusenTsuika_Click(object sender, EventArgs e)
         {
+            //Response.Write("<script language='javascript'>window.alert('確認してください。');</script>");
+            //string jscript = "<script>alert('YOUR BUTTON HAS BEEN CLICKED')</script>";
+            //System.Type t = this.GetType();
+            //ClientScript.RegisterStartupScript(t, "k", jscript);
+
             SessionUtility.SetSession("HOME", "Popup");
             ifShinkiPopup.Src = "K2_Kouteipopup.aspx";
             mpeShinkiPopup.Show();
@@ -94,6 +98,7 @@ namespace Koutei.WebFront
 
         protected void chk_santo_CheckedChanged(object sender, EventArgs e)
         {
+
             //get_data_DB();
             //BindBoard();
         }
@@ -119,6 +124,8 @@ namespace Koutei.WebFront
                 get_data_DB();
                 BindBoard();
                 mailsend();
+
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);
             }
             else
             {
@@ -153,6 +160,7 @@ namespace Koutei.WebFront
                 Response.Write("<script>alert('" + ex.Message + "');</script>");
             }
         }
+
 
         private void messge_set()
         {

@@ -30,7 +30,7 @@
     </div>
     <div class="UC01DivHeight">        
         <div style="float: right;">
-            <asp:Button ID="bt_end" runat="server" Text="完了" CssClass="WhiteBackgroundButton1" OnClick="Button1_Click" OnClientClick="playSound();"/>
+            <asp:Button ID="bt_end" runat="server" Text="完了" CssClass="WhiteBackgroundButton1" OnClick="Button1_Click" OnClientClick="playSound();displayLoadingModal();"/>
         </div>
     </div>
 </div>

@@ -3,14 +3,18 @@
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml"><head runat="server"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    <link href="../Content/bootstrap.min.css" rel="stylesheet" />        <script src="../Scripts/bootstrap.bundle.min.css"></script><script src="../Scripts/Common/Common.js"></script>
-   <asp:PlaceHolder runat="server">             <%: Styles.Render("~/style/StyleBundle2") %>             <%: Styles.Render("~/style/UCStyleBundle") %>        <%: Scripts.Render("~/scripts/ScriptBundle1") %>        </asp:PlaceHolder> 
-  
+<html lang="ja"><head runat="server">    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>    <link href="../Content/bootstrap.min.css" rel="stylesheet" />        <script src="../Scripts/bootstrap.bundle.min.css"></script>  
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="Scripts/jquery.js"></script>
+    <asp:PlaceHolder runat="server">        <%: Styles.Render("~/style/StyleBundle2") %>        <%: Styles.Render("~/style/UCStyleBundle") %>        <%: Scripts.Render("~/scripts/ScriptBundle1") %>       </asp:PlaceHolder>  
+       
+    
   <script>
       window.onload = function() {		
 		//ここで本体を表示にさせる
-          document.getElementById('div_image').style.display = 'none';
           document.getElementById('div_board').style.display = 'block';
+          
             //alert('ページの読み込みが完了したよ！');   
 }
 </script>
@@ -32,34 +36,33 @@
         <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="True" runat="server">
             <Scripts>
                 <%--Framework Scripts--%>                
+                 <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Path="../Scripts/Common/FixFocus.js" />
             </Scripts>           
-        </asp:ScriptManager>
+        </asp:ScriptManager>        
+         
         <div class="container-fluid" >
             <div style="margin-left:4px;">
             <div class="row ">
                 <div class="col col-md-auto">
                     <asp:Button ID="btnFusenTsuika" runat="server" Text="＋タスクを追加" CssClass="UC02FusentSuikaBtn UC02MobileFusentSuikaBtn ml-3" role="button"
-                    onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');" OnClick="btnFusenTsuika_Click" /> <br />
+                    onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');"  OnClientClick="displayLoadingModal();" OnClick="btnFusenTsuika_Click"/> <br />
                      
                 </div>
                 <div class="col col-md-auto align-content-center mt-2">
-                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" OnCheckedChanged="chk_santo_CheckedChanged" />
+                    <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" OnCheckedChanged="chk_santo_CheckedChanged" OnClientClick="displayLoadingModal();"/>
                 </div>  
             </div>
         </div>    
      
-        <div class="row mx-0 " id="div_image" runat="server" style="display:block;">
-           <asp:Image ID="loading" runat="server" ImageUrl="../Img/loading.gif" CssClass="TooltipLbl" Width="100" Height="100" class="rounded mx-auto d-block"/>
-           
-                    
-        </div>
+       
         <div class="row mx-0 " id="div_board" runat="server" style="display:none;">
         <asp:UpdatePanel ID="updFusenMain" runat="server" UpdateMode="Conditional" >
             <ContentTemplate>
                 <asp:Panel ID="pnlPending" runat="server" class="M02PendingDiv"></asp:Panel>
-                <%--<asp:Panel ID="pnlFusenMain" runat="server" class="M02FusenMainDiv">
-                </asp:Panel>--%>
+                <asp:Panel ID="pnlFusenMain" runat="server" class="M02FusenMainDiv">
+                </asp:Panel>
                 <%--<asp:HiddenField ID="hdnSourceId" runat="server" />
                 <asp:HiddenField ID="hdnTargetId" runat="server" />
                 <asp:HiddenField ID="hdnFusenId" runat="server" />
@@ -94,7 +97,6 @@
                     </asp:Panel>
                 </ContentTemplate>
             </asp:UpdatePanel>
-
     </form>
 </body>
 </html>
