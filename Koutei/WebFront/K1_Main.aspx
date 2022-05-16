@@ -43,13 +43,27 @@
         </asp:ScriptManager>        
          
         <div class="container-fluid" >
-            <div style="margin-left:4px;">
+            <div style="margin-left:10px;">
             <div class="row ">
+
+                <div class="col col-md-auto">
+                    <asp:Button ID="btn_SaishinJyouhou" runat="server" Text="最新情報を表示" role="button" CssClass="UC02SaishinjyouhouBtn UC02MoileSaishinjyouhouBtn"
+                    onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');"  OnClientClick="displayLoadingModal();" /> <br />
+                     
+                </div>
+
                 <div class="col col-md-auto">
                     <asp:Button ID="btnFusenTsuika" runat="server" Text="＋タスクを追加" CssClass="UC02FusentSuikaBtn UC02MobileFusentSuikaBtn ml-3" role="button"
                     onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');"  OnClientClick="displayLoadingModal();" OnClick="btnFusenTsuika_Click"/> <br />
                      
                 </div>
+
+                 <asp:UpdatePanel ID="UpdTaskTsuika" runat="server" UpdateMode="Conditional" >
+                    <ContentTemplate>
+                        <asp:Panel ID="pnlTask" runat="server"></asp:Panel>               
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+
                 <div class="col col-md-auto align-content-center mt-2">
                     <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" OnCheckedChanged="chk_santo_CheckedChanged" Onchange="displayLoadingModal();"/>
                 </div>  
@@ -62,6 +76,7 @@
             <ContentTemplate>
                 <asp:Panel ID="pnlPending" runat="server" class="M02PendingDiv"></asp:Panel>
                 <asp:Panel ID="pnlFusenMain" runat="server" class="M02FusenMainDiv">
+                   
                 </asp:Panel>
                 <%--<asp:HiddenField ID="hdnSourceId" runat="server" />
                 <asp:HiddenField ID="hdnTargetId" runat="server" />

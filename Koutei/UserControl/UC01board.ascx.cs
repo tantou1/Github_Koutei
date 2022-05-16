@@ -13,7 +13,7 @@ namespace Koutei.UserControl
         
         #region "工程ボードに付箋データ設定"
 
-        public void SetPendingFusenBoardData()
+        public void SetPendingFusenBoardData(string bgcolor)
         {
             //工程タイトルを表示の為
             pnlFusen.CssClass = "UC02FusenInfoDiv PendingBoardDiv";
@@ -24,7 +24,10 @@ namespace Koutei.UserControl
             {
                 lblcount.Text = Session["TaskCount"].ToString();
             }
-            divFusenList.Style.Add("background-color", "rgb(197,224,245)");
+            //divFusenList.Style.Add("background-color", "rgb(197,224,245)");
+            title_bar.Style.Add("width", "100%");
+            title_bar.Style.Add("height", "1%");
+            title_bar.Style.Add("background-color", bgcolor);
         }
 
         #endregion

@@ -18,9 +18,9 @@
                     onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');"  OnClientClick="displayLoadingModal();" OnClick="btnFusenTsuika_Click" /> <br />
                      
                 </div>
-                <div class="col col-md-auto align-content-center mt-2">
+                <%--<div class="col col-md-auto align-content-center mt-2">
                     <asp:CheckBox ID="chk_santo" runat="server" AutoPostBack="True" Text="先頭工程のみ表示" CssClass="bigcheck" onchange="displayLoadingModal();" OnCheckedChanged="chk_santo_CheckedChanged"/>
-                </div>  
+                </div>  --%>
             </div>
             </div>   
         </div>

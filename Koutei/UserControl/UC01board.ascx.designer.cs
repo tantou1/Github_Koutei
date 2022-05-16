@@ -22,6 +22,15 @@ namespace Koutei.UserControl {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divFusenList;
         
         /// <summary>
+        /// title_bar コントロール。
+        /// </summary>
+        /// <remarks>
+        /// 自動生成されたフィールド。
+        /// 変更するには、フィールドの宣言をデザイナー ファイルから分離コード ファイルに移動します。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl title_bar;
+        
+        /// <summary>
         /// divPendingHeader コントロール。
         /// </summary>
         /// <remarks>

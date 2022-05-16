@@ -552,3 +552,39 @@
     font-size: 12px;
     margin-top: 1px;
 }
+
+.UC02SaishinjyouhouBtn {
+    display: block !important;
+    height: 30px;
+    border: none;
+    margin-top: 5px;
+    color: white !important;
+    background-color: #14B0F2 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+}
+
+    .UC02SaishinjyouhouBtn:hover {
+        background-color: rgb(220,220,220) !important;
+        color: white !important;
+        width: 150px;
+    }
+
+@media (max-width: 480px) {
+    .UC02SaishinjyouhouBtn {
+        width: calc(100vw - 130px) !important;
+    }
+}
+
+@media (min-width: 481px) {
+    .UC02SaishinjyouhouBtn {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .UC02MoileSaishinjyouhouBtn {
+        margin-left: 4px;
+    }
+}

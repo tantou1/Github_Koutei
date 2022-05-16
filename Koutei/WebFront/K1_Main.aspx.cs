@@ -33,9 +33,9 @@ namespace Koutei.WebFront
         {
 
         }
-            private void BindBoard()
+        private void BindBoard()
         {
-            
+
             PinChange();
 
             //K_ClientConnection_Class test = new K_ClientConnection_Class();
@@ -44,9 +44,13 @@ namespace Koutei.WebFront
             //K3_Label_DataGet_Class label = new K3_Label_DataGet_Class();
             //DataTable dtLabel = label.Get_Label(chk_santo.Checked);
 
+            //UC03Main ucmain = (UC03Main)LoadControl("~/UserControl/UC03Main.ascx");
+            //ucmain.ID = "UCMain";
+            //ucmain.TaskTsuika += this.HandleTaskTsuika;
+            //pnlTask.Controls.Add(ucmain);
+            //UpdTaskTsuika.Update();
 
-
-            DataTable dt = Session["dt"] as DataTable;            DataTable dtLabel = Session["dtLabel"] as DataTable;            for (int i = 0; i < dt.Rows.Count; i++)            {                DataRow[] drresult = dtLabel.Select("koutei_id = " + dt.Rows[i]["id"].ToString());                DataTable dt_label_koutei = dtLabel.Clone();                if (drresult.Length > 0)                {                    dt_label_koutei = drresult.CopyToDataTable();                }
+            DataTable dt = Session["dt"] as DataTable;            DataTable dtLabel = Session["dtLabel"] as DataTable;            int color_i = 0;            for (int i = 0; i < dt.Rows.Count; i++)            {                DataRow[] drresult = dtLabel.Select("koutei_id = " + dt.Rows[i]["id"].ToString());                DataTable dt_label_koutei = dtLabel.Clone();                if (drresult.Length > 0)                {                    dt_label_koutei = drresult.CopyToDataTable();                }
 
                 //工程ボードを設定する
                 UC01board ucBoard = (UC01board)LoadControl("~/UserControl/UC01board.ascx");                ucBoard.ID = "ucPending" + dt.Rows[i]["id"].ToString();                Session["BoardName"] = dt.Rows[i]["title"].ToString();                Session["BoardID"] = dt.Rows[i]["id"].ToString();
@@ -57,7 +61,43 @@ namespace Koutei.WebFront
                 }                else
                 {
                     Session["TaskCount"] = "";
-                }                ucBoard.SetPendingFusenBoardData();                pnlPending.Controls.Add(ucBoard);
+                }                string color = "";                if (color_i == 0)
+                {
+                    color = "#7CD0FF";
+                    color_i++;
+                }                else if (color_i == 1)
+                {
+                    color = "#F65161";
+                    color_i++;
+                }                else if (color_i == 2)
+                {
+                    color = "#FDD853";
+                    color_i++;
+                }                else if (color_i == 3)
+                {
+                    color = "#FC78B9";
+                    color_i++;
+                }
+                else if (color_i == 4)
+                {
+                    color = "#36C398";
+                    color_i++;
+                }
+                else if (color_i == 5)
+                {
+                    color = "#AEDA49";
+                    color_i++;
+                }
+                else if (color_i == 6)
+                {
+                    color = "#7D5CC1";
+                    color_i++;
+                }
+                else if (color_i == 7)
+                {
+                    color = "#FF954A";
+                    color_i = 0;
+                }                ucBoard.SetPendingFusenBoardData(color);                pnlPending.Controls.Add(ucBoard);
 
                 //工程ボードの中に付箋を設定する
                 Panel pnlFusen = (Panel)ucBoard.FindControl("pnlFusen");                if (dt_label_koutei.Rows.Count > 0)                {                    for (int j = 0; j < dt_label_koutei.Rows.Count; j++)                    {                        UC02Label ucLabelJouhou = (UC02Label)LoadControl("~/UserControl/UC02Label.ascx");                        ucLabelJouhou.ID = "uc" + (j + 1);                        ucLabelJouhou.SetFusenJouhou(dt_label_koutei.Rows[j]);
@@ -87,6 +127,8 @@ namespace Koutei.WebFront
             ifShinkiPopup.Src = "K2_Kouteipopup.aspx";
             mpeShinkiPopup.Show();
             updShinkiPopup.Update();
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);
         }
 
         protected void btn_ClosePopup_Click(object sender, EventArgs e)
@@ -101,6 +143,8 @@ namespace Koutei.WebFront
 
             //get_data_DB();
             //BindBoard();
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);
         }
 
         public void HandleDeleteLabel(object sender, EventArgs e)
@@ -130,7 +174,7 @@ namespace Koutei.WebFront
             else
             {
                 return;
-            }            
+            }
 
         }
 
@@ -190,6 +234,14 @@ namespace Koutei.WebFront
             Session.Add("message", message);
             Session.Add("smtp", smtp);
         }
+        public void HandleTaskTsuika(object sender, EventArgs e)
+        {
+            //SessionUtility.SetSession("HOME", "Popup");
+            //ifShinkiPopup.Src = "K2_Kouteipopup.aspx";
+            //mpeShinkiPopup.Show();
+            //updShinkiPopup.Update();
 
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);
+        }
     }
 }
