@@ -236,12 +236,12 @@ namespace Koutei.WebFront
         }
         public void HandleTaskTsuika(object sender, EventArgs e)
         {
-            //SessionUtility.SetSession("HOME", "Popup");
-            //ifShinkiPopup.Src = "K2_Kouteipopup.aspx";
-            //mpeShinkiPopup.Show();
-            //updShinkiPopup.Update();
+            SessionUtility.SetSession("HOME", "Popup");
+            ifShinkiPopup.Src = "K2_Kouteipopup.aspx";
+            mpeShinkiPopup.Show();
+            updShinkiPopup.Update();
 
-            //ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);
         }
     }
 }
