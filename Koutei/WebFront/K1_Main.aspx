@@ -41,15 +41,16 @@
                 <asp:ScriptReference Path="../Scripts/Common/FixFocus.js" />
             </Scripts>           
         </asp:ScriptManager>
-            
-             <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#7CD0FF; height: 45px;">
+
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#7CD0FF; height: 45px;">
                 <div class="container d-flex justify-content-center""  >
                     <a class="navbar-brand" href="#" style="font-size: 24px;"> 工程ボート</a>                    
                 </div>
             </nav>
+             
          
         <div class="container-fluid" >
-            <div style="margin-left:10px; margin-top: 15px;">
+            <div style="margin-left:10px; margin-top: 55px;">
             <div class="row ">
 
                 <div class="col col-md-auto">
