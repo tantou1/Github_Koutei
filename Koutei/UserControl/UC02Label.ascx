@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <script>
   function playSound() {
-  var audio = new Audio('../sound/歓声と拍手2.mp3');
+  var audio = new Audio('../sound/ganbattane.mp3');
       audio.play();
     }    
 </script>

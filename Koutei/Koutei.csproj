@@ -251,8 +251,7 @@
     <Content Include="Scripts\src\utils\setAttributes.js" />
     <Content Include="Scripts\src\utils\setStyles.js" />
     <Content Include="Scripts\src\utils\setupEventListeners.js" />
-    <Content Include="sound\mixkit-medium-size-group-applause-and-laugh-516.wav" />
-    <Content Include="sound\歓声と拍手2.mp3" />
+    <Content Include="sound\ganbattane.mp3" />
     <Content Include="UserControl\UC02Label.ascx" />
     <Content Include="UserControl\UC03Main.ascx" />
     <Content Include="WebFront\K2_Kouteipopup.aspx" />
