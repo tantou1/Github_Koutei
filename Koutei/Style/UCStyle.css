@@ -4,7 +4,8 @@
     position: relative;
     display: block;
     border: 3px solid white;
-    background-color: rgb(255, 255, 255);
+    /*background-color: rgb(255, 255, 255);*/
+    background-color: #FFFFFF;
     box-shadow: 2px 2px 4px dimgrey;
     box-sizing: border-box;
     cursor: pointer;
@@ -371,9 +372,10 @@
 
 /******** UC02FusenBoard y*******/
 .UC02BoardDiv {
-    height: 87vh;
+    height: 76vh;
     overflow-y: hidden;
-    background-color: rgb(249, 247, 245);
+    /*background-color: rgb(249, 247, 245);*/
+    background-color: #EAE7DD;
     border-radius: 15px;
     vertical-align: middle;
     display: inline-block;
@@ -396,8 +398,10 @@
     height: 30px;
     border: none;
     margin-top: 5px;
-    color: rgb(41, 171, 226) !important;
-    background-color: white !important;
+    /*color: rgb(41, 171, 226) !important;*/
+    color: white !important;
+    /*background-color: white !important;*/
+    background-color: #14B0F2 !important;
     font-size: 13px !important;
     font-weight: 600 !important;
     border-radius: 6px !important;
