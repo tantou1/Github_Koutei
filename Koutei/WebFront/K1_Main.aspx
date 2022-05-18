@@ -55,7 +55,7 @@
 
                 <div class="col col-md-auto">
                     <asp:Button ID="btn_SaishinJyouhou" runat="server" Text="最新情報を表示" role="button" CssClass="UC02SaishinjyouhouBtn UC02MoileSaishinjyouhouBtn"
-                    onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');"  OnClientClick="displayLoadingModal();" /> <br />
+                    onmousedown="getAllDivScrollPosition('pnlFusenMain','MASTER');"  OnClientClick="displayLoadingModal();" OnClick="btn_SaishinJyouhou_Click" /> <br />
                      
                 </div>
 

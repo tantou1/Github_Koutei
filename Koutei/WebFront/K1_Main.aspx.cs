@@ -169,7 +169,7 @@ namespace Koutei.WebFront
                 BindBoard();
                 mailsend();
 
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);
+                //ScriptManager.RegisterStartupScript(this, this.GetType(), "CloseLoading", "closeLoadingModal();", true);
             }
             else
             {
@@ -234,6 +234,12 @@ namespace Koutei.WebFront
             Session.Add("message", message);
             Session.Add("smtp", smtp);
         }
+
+        protected void btn_SaishinJyouhou_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void HandleTaskTsuika(object sender, EventArgs e)
         {
             SessionUtility.SetSession("HOME", "Popup");
