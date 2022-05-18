@@ -312,6 +312,7 @@ function parentButtonClick(btnHome, value) {
 /************************************************************************/
 function displayLoadingModal(flgReadCSV) {
     var length = $('div[id^=divLoading]').length;
+    console.log("Current directory");
     if (length == 0) {
         // Build loading element 
         var dialogDiv = "<div id='divLoading' class='DialogInnerDiv'>";
@@ -321,7 +322,9 @@ function displayLoadingModal(flgReadCSV) {
         else {
             dialogDiv += "<span class='DisplayBlock'>読込中</span>";
         }
-        dialogDiv += "<img src='../Img/loading.gif' height='30' /></div>";
+        
+        dialogDiv += "<img src='https://www.jquery-az.com/html/images/banana.jpg' height='30' /></div>";
+        
         // Create a loading element and display it
         var myDialog = $(dialogDiv).dialog({
             height: 30,
