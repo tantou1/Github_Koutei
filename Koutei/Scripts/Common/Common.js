@@ -323,7 +323,7 @@ function displayLoadingModal(flgReadCSV) {
             dialogDiv += "<span class='DisplayBlock'>読込中</span>";
         }
         
-        dialogDiv += "<img src='https://www.jquery-az.com/html/images/banana.jpg' height='30' /></div>";
+        dialogDiv += "<img src='../Img/loading.gif' height='30' /></div>";
         
         // Create a loading element and display it
         var myDialog = $(dialogDiv).dialog({
